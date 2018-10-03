@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Array Methods </title>
+</head>
+
+<script>
+"use strict";
+function modify() {
+    let i = Number(ie.value); let x = xe.value; 
+    xe.value = a[i]; a[i] = x; reportA("a["+i+"] = "+x);
+}
+function remove() {
+    let i = Number(ie.value);
+    xe.value = a[i]; a.splice(i, 1); reportA("remove "+i);
+}
+function push() {
+    let x = xe.value; let i = Number(ie.value);
+    a.push(x); reportA("push "+x);
+}
+function popA() {
+    xe.value = a.pop(); reportA("pop ");
+}
+function reportA(str) {
+    outA.innerText = "a = [ "+ a.join(", ")+" ] "+a.length;
+    console.log(str);
+}
+function filter(){
+a.toString();
+let x = Number(ie.value);
+const sonuc = a.filter(kelime => kelime.length > x);
+outA.innerText = "filter Metodu: lenght > "+x+" olan elemanları a = [ "+ sonuc.join(", ")+" ] "+a.length;
+}
+function reverse(){
+a.reverse();
+outA.innerText = "Reverse Metodu: a = [ "+ a.join(", ")+" ] "+a.length;
+reportA("reverse : "+a+"");
+}
+function shift() {
+a.shift();
+reportA("Shift metodu : "+a[0]+". elaman silindi");
+outA.innerText = "Shift Metodu a = [ "+ a.join(", ")+" ] "+a.length;
+}
+function unshift(){
+let x = xe.value;
+a.unshift(x);
+outA.innerText = "Unshift Metodu: a = [ "+ a.join(", ")+" ] "+a.length;
+reportA("unshift metodu : "+x+" eleman eklendi" );
+}
+</script>
+
+<body>
+<h2 id=title></h2>
+
+<p id=outA></p>
+<p>
+i = <input type=number id=ie value=1  style="width:40px"> &emsp; 
+x = <input type=text   id=xe value=Rize style="width:99px"> 
+</p><p>
+<abbr title="girilen x değerinden büyük elemanları ekrana yazar"><input type=button value="filter"   onClick="filter()"></abbr>
+<abbr title="diziyi ters şekilde sıralar"><input type=button value="reverse"   onClick="reverse()"></abbr>
+<abbr title="dizinin ilk indeksine x değerini ekler ve diğer elemanları bir index kaydırır"><input type=button value="unshift"   onClick="unshift()"></abbr>
+<abbr title="dizinin ilk indeksini siler ve diğer elemanların indeksini 1 yukarı kaydırır"><input type=button value="shift"   onClick="shift()"></abbr>
+<input type=button value="a[i]=x"  onClick="modify()">
+<input type=button value="remove"  onClick="remove()">
+<input type=button value="push x"  onClick="push()">
+<input type=button value="x=pop"   onClick="popA()">
+
+</p>
+
+<hr />
+Mouse on hover for information
+<p>Ref: 
+<a href="https://www.w3schools.com/js/js_arrays.asp" target="ExternalDocument">Array Examples</a></p>
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Keyed_collections" target="ExternalDocument">Set Examples</a>
+</p>
+
+<script>
+    title.innerText = document.title;
+    const a = ["deneme", "abc", "son","blm305","myrepo","1453"];  //initially
+    reportA("start");
+</script>
+
+</body>
+</html>
