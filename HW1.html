@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Array Methods </title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script>
+"use strict";
+function formReset() {
+    document.getElementById("form1").reset();
+ }
+
+function Rnd() {
+
+    var rx = Math.floor((Math.random() * 100) + 1);
+    document.getElementById("midterm").value = rx;
+    var ry = Math.floor((Math.random() * 100) + 1);
+    document.getElementById("final").value = ry;
+    var rz = Math.random().toString(32).substring(8).toUpperCase();
+    document.getElementById("cname").value = rz;
+
+}
+
+function avg() {
+    var tablo = "<table border=0 ><tbody>";
+    var ort=0;
+    tablo +="<tr><td><b>Name</b></td><td><b>Average</b></td></tr>";
+
+for(var m=0; m< Arr.length; m++) 
+{
+    tablo +="<tr>";
+    tablo += "<td>" + Arr[m][0] + "</td>";
+    ort= (Arr[m][1]+Arr[m][2])/2;
+    tablo += "<td>" + ort + "</td>";
+    tablo += "</tr>";
+    console.log(ort);
+}
+
+tablo+= "</tbody></table>";
+outAvg.innerHTML = tablo;
+}
+
+function maks() {
+	
+    var ort=0;
+    var max=0; 
+    var maxindex=0;
+    var tablo = "<table border=0 ><tbody>";
+    tablo +="<tr><td><b>Name</b></td><td><b>Max</b></td></tr>";
+
+ for(var m=0; m< Arr.length; m++) 
+{
+    ort=(Arr[m][1]+Arr[m][2])/2;
+    aMax.push(ort);
+
+        if(ort>max) { 
+            max=ort ; 
+            maxindex=m;
+        }
+    
+} 
+  /**   while (m < Arr.length)
+     {
+        ort=(Arr[m][1]+Arr[m][2])/2;
+        aMax.push(ort);
+        if(ort>max){
+            max=ort;
+            maxindex=m;
+        }
+
+        m++; 
+     } ***/
+      
+    tablo +="<tr>";
+    tablo += "<td>" + Arr[maxindex][0] + "</td>";
+    tablo += "<td>" + Math.max(...aMax); + "</td>";
+    tablo += "</tr>";
+    tablo += "</tbody></table>";
+    outMax.innerHTML = tablo; 
+    console.log("MAX AVG..: "+Math.max(...aMax));
+    for( var i = aMax.length-1; i--;){
+    aMax.splice(i, 1);
+    }
+    
+
+
+}
+
+function push() {
+    let courseName = cname.value;
+	let midtermScore = Number(midterm.value);
+    let finalScore = Number(final.value);
+    Arr.push([courseName,midtermScore,finalScore])
+      formReset();
+//   printHtml();
+    console.log(Arr);
+}
+function printHtml(str) {
+ 
+        //console.log(str);
+    
+	var tablo = "<table border=0 ><tbody>";
+    tablo +="<tr><td><b>Name</b></td><td><b>Midterm</b></td><td><b>Final</b></td></tr>";
+
+for(var m=0; m< Arr.length; m++) 
+{
+    tablo +="<tr>";
+	
+    for(var n= 0; n < Arr[m].length; n++){
+		   //if (m==0){tablo += "<td>" + Arr[m][n] + "</td>";}
+           // else {tablo += "<td>" + Arr[m][n] + "</td>";}
+           tablo += "<td>" + Arr[m][n] + "</td>";
+						}
+	tablo += "</tr>";
+
+}
+
+tablo+= "</tbody></table>";
+outPrint.innerHTML = tablo;
+console.log("Print()");
+}
+
+</script>
+<style>
+
+.btn-group .button {
+    background-color: #4CAF50; /* Green */
+    border: 1px solid green;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: center;
+}
+.btn-group .button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+.btn-group .button:hover {
+    background-color: #3e8e41;
+}
+</style>
+
+
+
+<body>
+
+
+
+<div class="w3-container w3-blue">
+  <h2>HW1 Array Demo</h2>
+  <h3>Add Course</h3>
+  
+</div>
+
+<form class="w3-container" id="form1">
+<table width="400px" border="0">
+  <tr>
+    <td>Name</td>
+    <td><input class="w3-input" type=text id=cname  placeholder="js, phyton etc." style="width:180px"></td>
+    <td rowspan="3"><div class="btn-group">
+      <input  type=button class="button" id="rndBtn" value="Random" onClick="Rnd()">
+      <input  type=button class="button" id="addButton" value="Add" onClick="push()">
+    </div></td>
+  </tr>
+  <tr>
+    <td>Midterm</td>
+    <td><input class="w3-input" type=number min="0" max="100" id=midterm placeholder="0-100"  style="width:180px"></td>
+    
+  </tr>
+  <tr>
+    <td>Final</td>
+    <td><input class="w3-input" type=number min="0" max="100" id=final placeholder="0-100"  style="width:180px"></td>
+    
+  </tr>
+</table>
+</form>
+  
+<div class="btn-group"><p>
+<input type=button value="Print" class="button" onClick="printHtml()">
+<input type=button value="Avg" class="button" onClick="avg()">
+<input type=button value="Max" class="button"  onClick="maks()">
+</p>
+</div>
+<hr />
+<p id=outPrint></p>
+<p id=outAvg></p>
+<p id=outMax></p>
+
+<br>
+<p>Ref: 
+<a href="https://www.w3schools.com/js/js_arrays.asp" target="ExternalDocument">Array Examples</a></p>
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Keyed_collections" target="ExternalDocument">Set Examples</a>
+</p>
+<p>1621221056</p>
+<script>
+
+    var Arr = [];
+    var aMax = [];
+
+</script>
+
+</body>
+</html>
