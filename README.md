@@ -3,5 +3,5 @@ CW_2 Array Sample &nbsp;&nbsp;<a href="https://mehmetalperenkurt.github.io/ileri
 <br>
 HW1 Array Demo &nbsp;&nbsp;<a href="https://mehmetalperenkurt.github.io/ileriprogramlama/HW1.html"><b>(public)</b></a>-<a href="https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/HW1.html"><b>(source)</b></a>
 <br>
-CW_4 Inspector &nbsp;&nbsp;<a href="https://mehmetalperenkurt.github.io/ileriprogramlama/c4_data.html"><b>(public)</b></a>-<a href="https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/c4_data.html"><b>(source)</b></a>
+CW_4 Inspector &nbsp;&nbsp;<a href="https://mehmetalperenkurt.github.io/ileriprogramlama/Inspector.html"><b>(public)</b></a>-<a href="https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/Inspector.html"><b>(source)</b></a>
 <br>
