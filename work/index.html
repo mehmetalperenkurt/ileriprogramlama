@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://maeyler.github.io/JS/sss/inspector.css" 
+          rel="stylesheet" media="all">
+    <script src="inspector.js"></script>
+	<script src="database.js"></script>
+   
+    <title>Eloquent JavaScript </title>
+</head>
+
+<body>
+<p><b id=docName></b> &nbsp;
+<a href="https://maeyler.github.io/JS/sss/">Read me</a> &nbsp;
+<a href="https://maeyler.github.io/JS/sss/Turkish">Turkish</a>
+</p>
+<script>
+
+"use strict";
+
+class Point {
+	constructor(x,y) {
+		this.x = x;
+		this.y = y;
+					}
+toString(){
+	return "("+this.x+","+this.y+")"
+	}
+}
+class Point3D extends Point {
+	constructor(x,y,z) {
+		super(x,y)
+		this.z= z;
+}
+toString(){ 
+	return"("+this.x+","+this.y+","+this.z+")" 
+	}
+}
+class Distance {
+constructor(km=0) {
+this.km = Math.round(km);
+}
+get miles() {
+    return Math.round(this.km * 0.6213);
+}
+set miles(value=0) {
+    this.km = Math.round(value/(1.609344));
+}
+toString(){  return this.km +"km = "+ this.miles+" miles"  }
+}
+/*class Distance2 {
+constructor(miles=0) {
+this.miles = Math.round(miles);
+}
+get km() {
+    return Math.round(this.km/(1.609344));
+}
+set km(value=0) {
+    this.miles = Math.round(value * 0.6213);
+}
+toString(){  return this.miles +"miles = "+ this.km+" km"  }
+}*/
+
+function init() {
+	MENU = new ClassWork4(); //global 
+    display(MENU);
+}
+    docName.innerText = "Inspector "+VERSION;
+    try {
+        inspect(document.body, init); //makes the table
+        //inp.value = "new Number(c.pi)";
+    } catch(e) {
+        reportError(e);
+    }
+
+
+/*class ClassWork4 extends Menu {
+  constructor() {
+  	super();
+  	this.point = new Point(2,5);
+  	this.point3d = new Point3D(3,6,9);
+  }
+}*/
+</script>
+<p><input type=file multiple onChange='fileSelect(this)' />
+</p><p>
+
+<a href="https://mehmetalperenkurt.github.io/ileriprogramlama/HW1.html">HW1 Array Demo</a> &emsp;
+<a href="https://mehmetalperenkurt.github.io/ileriprogramlama/CW2_Array_Demo.html">CW2 Array Demo</a> &emsp;
+<a href="https://mehmetalperenkurt.github.io/ileriprogramlama/inspector.html">CW3 Object Demo</a>
+</p>
+<pre id=disp1></pre>
+<img id=disp2 />
+
+</body>
+</html>
