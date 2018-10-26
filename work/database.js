@@ -30,6 +30,8 @@ class ClassWork4 extends Menu {
     courses.push(c3);
     this.Student1 = new Student(1421221, "Ahmet", 2.88, courses);
     this.Student2 = new Student(1521225, "Ali", 3.04, courses);
+    this.Student1.courses.push(courses);
+    this.Student2.courses.push(courses);
     this.Courses = courses;
     this.Point = new Point(9,4);
     this.Point3D = new Point3D(4,9,4);
