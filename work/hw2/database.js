@@ -28,10 +28,11 @@ class Database {
         this.keys2=[]
         this.vals1=[]
         this.vals2=[]
-        this.student = new Map();
-        this.course = new Map();
+       // this.Students = new Map();
+       // this.Courses = new Map();
         this.readStudents();
         this.readCourses();
+        
     }
 readStudents() {
     console.log("readStudents "+this.urlS);
@@ -52,15 +53,14 @@ addStudent(txt){
    msg += a.length+" lines, ";
    for (let s of a) {
      let student = this.parseStudent(s);
-     //this.keys1.push(student.id);
-     //this.vals1.push(student);
+     this.keys1.push(student.id);
+     this.vals1.push(student);
     // console.table(student);
    }
    //console.table(this.keys1);
    //console.table(this.vals1);
    //console.table(student);
 }
-
 parseStudent(line){
 	let s = line.split("\t");
     let courses = [];
@@ -74,9 +74,9 @@ addCourse(txt){
     msg += a.length+" lines, ";
     for (let s of a) {
       let course = this.parseCourse(s);
-      //this.keys2.push(course.coursename);
-      //this.vals2.push(course);
-      console.table(course);
+      this.keys2.push(course.coursename);
+      this.vals2.push(course);
+      //console.table(course);
       }
       
     //console.table(this.keys2);
@@ -103,27 +103,62 @@ parseCourse(line){
     return course
 }
 randomStudent(){
-
+    let i = Math.trunc(this.keys1.length * Math.random());
+    let b = this.vals1[i];
+    console.log(b.name,b.id)
 }
-aboveGpa(){
-	
+aboveGpa(gpa){
+    let numberOfAbove = 0;
+    for (let std of this.vals1) 
+        if (std.gpa > gpa) numberOfAbove++;
+    console.log(numberOfAbove)
+    return numberOfAbove
 }
 bestGpa(){
-
+    let b = this.vals1[0];
+    for (let student of this.vals1) 
+        if (student.gpa > b.gpa) b = student;
+    console.log("Best: "+b.name, b.id, b.gpa);
 }
-coursesTakenByGivenStu(){
-
+findID(id) {
+    let i = this.keys1.indexOf(id);
+    if (i < 0) return null;
+    return this.vals1[i];
+}
+showStudent(id){
+    let t = id+" ";
+    let std = this.findID(id);
+    if (!std) {
+        console.log(t+"not found"); return;
+    }
+    t += std.name+" "+std.gpa;
+    console.log(t, std.courses.length+" courses", std.courses);
 }
 examScheduleGivenStu(){
 
 }
-studentListGivenCourse(){
-
+studentListGivenCourse(scode){
+    scode = scode.toUpperCase();
+    let a = [];
+    for (let std of this.vals1) 
+        if (std.courses.includes(scode)) 
+            a.push(std.id+" "+std.name);
+    if (a.length > 0)
+        console.log(scode+": ", a.length+" students", a);
 }
-courseListGivenRoom(){
-
+courseListGivenRoom(rcode){
+    rcode = rcode.toUpperCase();
+    let a = [];
+    for (let crs of this.vals2) 
+        if (crs.room.includes(rcode)) 
+            a.push(crs.coursename+" ");
+    if (a.length > 0) console.log(rcode+": ", a.length+" courses given in a "+rcode, a);
+    else console.log("no courses were found in this class.")
 }
-totalNumberCourseGivenRoom(){
-
+totalNumberOfCourseGivenRoom(rcode){
+    this.courseListGivenRoom(rcode).a.length;
+    if (a.length > 0)
+        console.log(rcode+": ", a.length+" courses given in a "+rcode, a);
+        else console.log("no courses were found in this class.")
 }
 }
