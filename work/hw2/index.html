@@ -34,15 +34,21 @@
 
 <h2 id=title></h2>
 
-<button onClick='randomStd()'>Random</button>
-<button onClick='findBest()'>Best GPA</button>
+<button onClick='db.randomStudent()'>Random Student</button>
+<button onClick='db.bestGpa()'>Best GPA</button>
 <button onClick='out.innerText=""'>Clear</button>
 
 <p>Student id: 
-<input type=number onChange="showStd(value)">
+<input type=number onChange="db.showStudent(value)">
 </p>
-<p>Course code: 
-<input type=text onChange="studentsIn(value)" value="math 206 ">
+<p>Course name: 
+<input type=text onChange="db.studentListGivenCourse(value)">
+</p>
+<p>Room : 
+<input type=text value="bz014" onChange="db.courseListGivenRoom(value)">
+</p>
+<p>Numbers of Above GPA 
+<input type=number id="gpa" onChange="db.aboveGpa(value)">
 </p>
 <p id=out onClick='doClick(event)'>Result:</p>
 
@@ -52,8 +58,8 @@
 <hr />
 
 <script>
-    //title.innerText = document.title;
-    //sample.innerText = readData+"\n"+addStudents;
+    title.innerText = document.title;
+    //sample.innerText = data+"\n"+addStudents;
     //const keys = [], vals = [];
     db = new Database();
 
