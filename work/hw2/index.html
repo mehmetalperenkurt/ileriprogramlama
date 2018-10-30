@@ -35,22 +35,26 @@
 <h2 id=title></h2>
 
 <button onClick='db.randomStudent()'>Random Student</button>
-<button onClick='db.bestGpa()'>Best GPA</button>
+<button onClick='db.randomCourse()'>Random Course</button>
+<button onClick='db.randomRoom()'>Random Room</button>
 <button onClick='out.innerText=""'>Clear</button>
-
+<p>Course name: 
+<input type=text id=crs value="LIT 205" onChange="db.studentListGivenCourse(value)">
+</p>
+<button onClick="db.studentListGivenCourse(crs.value)">StudentList</button>
 <p>Student id: 
-<input type=number id=stu onChange="db.showStudent(value)">
+<input type=number id=stu value="213863906" onChange="db.showStudent(value)">
 </p>
 <button onClick='db.examScheduleGivenStu(stu.value)'>ExamSchedule</button>
-<p>Course name: 
-<input type=text value="UNI 201 " onChange="db.studentListGivenCourse(value)">
-</p>
 <p>Room : 
-<input type=text value="bz014" onChange="db.courseListGivenRoom(value)">
+<input type=text value="gg306" id=room onChange="db.courseListGivenRoom(value)">
 </p>
-<p>GPA 
-<input type=number id="gpa" onChange="db.aboveGpa(value)">
+<button onClick="db.courseListGivenRoom(room.value)">CourseList</button>
+<button onClick="db.totalNumberOfCourseGivenRoom(room.value)">Total Number Courses</button>
+<p>Above/Below GPA 
+<input type=number id="gpa" value="2.45" onChange="db.aboveGpa(value)">
 </p>
+<button onClick='db.bestGpa()'>Best GPA</button>
 <p id=out onClick='db.doClick(event)'>Result:</p>
 
 <hr />
