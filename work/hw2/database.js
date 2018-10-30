@@ -51,7 +51,6 @@ addStudent(txt){
    let msg = txt.length+" chars, ";
    let a = txt.split("\n");
    msg += a.length+" lines, ";
-   console.log(msg);
    for (let s of a) {
      let student = this.parseStudent(s);
      this.Students.set(student.id,student);
@@ -123,6 +122,11 @@ randomCourse(){
     let b = this.vals2[i];
     this.report(b.coursename);
 }
+randomRoom(){
+    let i = Math.trunc(this.vals2.length * Math.random());
+    let b = this.vals2[i];
+    this.report(b.room[0]);
+}
 aboveGpa(gpa){          //* Number of students above a given GPA
     let numberOfAbove = 0;
     let numberOfBelow = 0;
@@ -170,8 +174,7 @@ examScheduleGivenStu(id){             //* Exam schedule for a given student
     let examSchedule = []
     for(let course of std.courses)
     examSchedule.push(course.coursename+" "+course.examdate+" "+course.examtime)
-        console.table(examSchedule)
-        this.report(std.name,": Exam List",examSchedule)
+    this.report(std.name,": Exam List",examSchedule)
 }
 studentListGivenCourse(scode){
     scode = scode.toUpperCase();
@@ -195,10 +198,13 @@ courseListGivenRoom(rcode){             //* Course list for a given exam room
     else this.report("no courses were found in this class.")
 }
 totalNumberOfCourseGivenRoom(rcode){            //* Total number of courses in a given room
-    this.courseListGivenRoom(rcode).a.length;
-    if (a.length > 0)
-        this.report(rcode+": ", a.length+" courses given in a "+rcode, a);
-        else this.report("no courses were found in this class.")
+    rcode = rcode.toUpperCase();
+    let a = [];
+    for (let crs of this.vals2) 
+        if (crs.room.includes(rcode)) 
+            a.push(crs.coursename+" ");
+    if (a.length > 0) this.report(a.length+" courses given in a "+rcode);
+    else this.report("no courses were found in this class.")
 }
 report(msg, id, list) {
     out.innerHTML += "<br>"; msg += " ";
@@ -234,5 +240,4 @@ doClick(evt) {
         setTimeout(hide, 500);
     }
 }
-
 }
