@@ -127,10 +127,10 @@ randomRoom(){
     let b = this.vals2[i];
     this.report(b.room[0]);
 }
-aboveGpa(gpa){          //* Number of students above a given GPA
+aboveGpa(gpa){          //* Number of students above a given GPA - MAP
     let numberOfAbove = 0;
     let numberOfBelow = 0;
-    for (let std of this.vals1) 
+    for (let std of this.Students.values()) 
         if (std.gpa > gpa) numberOfAbove++;
         else numberOfBelow++;
     //console.log(numberOfAbove)
@@ -145,30 +145,33 @@ aboveGpa(gpa){          //* Number of students above a given GPA
     //console.log(numberOfAbove)
     report("Number of students above a "+gpa+" GPA :"+numberOfAbove)
 }*/ 
-bestGpa(){
+bestGpa(){              //  -MAP
     let b = this.vals1[0];
-    for (let student of this.vals1) 
+    /*for (let student of this.vals1) 
         if (student.gpa > b.gpa) b = student;
-    console.log("Best: "+b.name, b.id, b.gpa);
-    this.report("Best: "+b.name, b.id);
+    let b = this.Students.values();*/
+    for (let student of this.Students.values())
+        if (student.gpa > b.gpa) b = student;
+    //console.log("Best: "+b.name, b.id, b.gpa);
+    this.report("Best: "+b.name+" "+b.gpa, b.id);
 }
-findID(id) {
+/*findID(id) {
     let i = this.keys1.indexOf(id);
     if (i < 0) return null;
     return this.vals1[i];
-}
-showStudent(id){            //* Courses taken by a given student
+}*/
+showStudent(id){            //* Courses taken by a given student - MAP
     let t = id+" ";
-    let std = this.findID(id);
+    let std = this.Students.get(id);
     if (!std) {
-        console.log(t+"not found"); return;
+        this.report(t+"not found"); return;
     }
     t += std.name+" "+std.gpa;
     //console.log(t, std.courses.length+" courses", std.courses);
     this.report(t, std.courses.length+" courses", std.courses);
     return std
 }
-examScheduleGivenStu(id){             //* Exam schedule for a given student
+examScheduleGivenStu(id){             //* Exam schedule for a given student - MAP
     let std = this.Students.get(id);
     /*let std = this.showStudent(id);*/
     let examSchedule = []
@@ -188,21 +191,30 @@ studentListGivenCourse(scode){
         if (a.length > 0) this.report(scode+": ", a.length+" students", a);
         else this.report("No students in "+scode);
 }
-courseListGivenRoom(rcode){             //* Course list for a given exam room
+courseListGivenRoom(rcode){             //* Course list for a given exam room - MAP
     rcode = rcode.toUpperCase();
-    let a = [];
-    for (let crs of this.vals2) 
+    let a=[];
+   /*for (let crs of this.vals2) 
         if (crs.room.includes(rcode)) 
             a.push(crs.coursename+" ");
-    if (a.length > 0) this.report(rcode+": ", a.length+" courses given in a "+rcode, a);
-    else this.report("no courses were found in this class.")
+    if(a.length >0)*/
+    for (let course of this.Courses.values())
+    for (let room of course.room)
+        if(room.includes(rcode)) 
+            a.push(course.coursename+"")
+        if(a.length>0) this.report(rcode+": ", a.length+" courses given in a "+rcode, a);
+        else this.report("no courses were found in this class.")
 }
-totalNumberOfCourseGivenRoom(rcode){            //* Total number of courses in a given room
+totalNumberOfCourseGivenRoom(rcode){            //* Total number of courses in a given room- MAP
     rcode = rcode.toUpperCase();
     let a = [];
-    for (let crs of this.vals2) 
+    /*for (let crs of this.vals2) 
         if (crs.room.includes(rcode)) 
-            a.push(crs.coursename+" ");
+            a.push(crs.coursename+" ");*/
+    for (let course of this.Courses.values())
+    for (let room of course.room)
+        if(room.includes(rcode)) 
+            a.push(course.coursename+"")
     if (a.length > 0) this.report(a.length+" courses given in a "+rcode);
     else this.report("no courses were found in this class.")
 }
