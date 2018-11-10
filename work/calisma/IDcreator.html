@@ -1,0 +1,31 @@
+
+<script>
+    function creator(n){
+      out.innerHTML=null;
+        for(let i=0;i<n;i++){
+let firstNine=Math.floor(Math.random()*(899999999+100000001));
+  let tcId=[]
+  for(let j=8;j>=0;j--){
+    tcId[j]=(firstNine)%10;
+    if(firstNine<10){
+      firstNine=(firstNine)%10
+    }else{
+    firstNine=Math.floor((firstNine)/10);
+    }
+    //if(d[0]==0) d[0]=1
+  }
+tcId.push(Math.abs(((tcId[0]+tcId[2]+tcId[4]+tcId[6]+tcId[8])*7)-(tcId[1]+tcId[3]+tcId[5]+tcId[7]))%10);
+tcId.push((tcId[0]+tcId[2]+tcId[4]+tcId[6]+tcId[8]+tcId[1]+tcId[3]+tcId[5]+tcId[7]+tcId[9])%10);
+//document.write("<li>"+d.join('')+"</li>");
+out.innerHTML +="<li>"+tcId.join('')+"</li>"
+}
+
+
+  }
+</script>
+<body>
+  <input type=number id=inputN onChange="creator(inputN.value)">Quantity</input>
+  <p>
+    <output id=out></output>
+  </p>
+</body>
