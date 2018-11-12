@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repeated student finder</title>
+</head>
+<script src="foundations.js"></script>
+
+<body>
+	<h3 id=title>repeated student finder for given scholarships by foundations</h3>
+    <div><input type=file onchange="fileSelect(this)" id=button multiple />
+        <input type="button" onclick="c= new database()" value="Add" />
+    <hr>
+    </div>
+    <div id="search" style="visibility: hidden">
+    Single Search<br><input type="text" maxlength="11" id="searchById" onchange="c.singleSearch(searchById.value)">
+    <input type="button" value="Search" onclick="c.singleSearch(searchById.value)">
+    <br><output id="searchResult"></output>
+    <hr></div>
+    <div id="searchList" style="visibility: hidden">
+        Bulk Search (line by line)<br><textarea id="searchByList" onchange="c.bulkSearch(searchByList.value)"></textarea>
+        <input type="button" value="Search" onclick="c.bulkSearch(searchByList.value)">
+        <input type="button" value="only not found" onclick="c.bulkSearchNot(searchByList.value)">
+        <br><output id="searchListResult"></output><output id="searchListNotResult"></output>
+        <hr></div>
+    <script>
+        //c.readList(button)
+        //c=new database();
+    </script>
+
+</body>
+
+</html>

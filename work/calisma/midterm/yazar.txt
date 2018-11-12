@@ -1,0 +1,5 @@
+tomris	1925	gunes	ay	yildiz
+halit	1910	maliye	faiz	
+ahmet	1932	iktisat	ekonomi
+kemal	1945	kpss
+cemal	1895	ales	dgs
