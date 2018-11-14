@@ -76,7 +76,8 @@ function mapRandomSearch(makeAmap) {
 function arrayRandomSearch(array){
     countArray=0;
     for(let i=0; i<10000;i++){
-        let firstNine=Math.floor(Math.random()*(116700070-116690070+1)+116690070).toString();
+        //let firstNine=Math.floor(Math.random()*(116700070-116690070+1)+116690070).toString(); //wide range
+        let firstNine=Math.floor(Math.random()*(116690916-116690070+1)+116690070).toString(); //for more results
         if(array.includes(firstNine)==true){
             countArray++
         }
@@ -103,7 +104,8 @@ function timing(){
     let maptime=0;
     let arraytime=0;
     for(let i=0; i<10000;i++){
-        let firstNine=Math.floor(Math.random()*(116700070-116690070+1)+116690070).toString();
+        //let firstNine=Math.floor(Math.random()*(116700070-116690070+1)+116690070).toString(); 
+        let firstNine=Math.floor(Math.random()*(116690916-116690070+1)+116690070).toString(); //for more results
         let atime=performance.now();
         if(array.includes(firstNine)==true){
             countArray++
