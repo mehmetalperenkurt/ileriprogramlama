@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="database.js"></script>
+    <title>timing: Random Search Map & Array</title>
+
+<script>
+
+</script>
+</head>
+
+<body>
+<h2 id=title></h2>
+<button onClick='timing()'>Same Query</button>
+<button onClick='maptiming(mapRandomSearch); arraytiming(arrayRandomSearch); '>Diff Query</button>
+
+<p id=out></p>      
+<hr />
+<b>Sample code</b>
+<pre id=sample></pre>
+<hr />
+
+<script>
+    const url = "https://maeyler.github.io/JS/data/";
+    const array = []; const makeAmap=new Map();
+    var countMap=0;
+    var countArray=0;
+    title.innerText = document.title;
+    sample.innerText = timing+"\n" + mapRandomSearch +"\n" + arrayRandomSearch
+    readData("Students.txt")
+</script>
+
+</body>
+</html>
+
