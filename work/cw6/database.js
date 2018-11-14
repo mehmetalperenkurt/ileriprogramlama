@@ -62,10 +62,11 @@ function addStudents(txt) {
     // console.log(makeAmap)
     //console.log(array);
 }
-function mapRandomSearch(makeAmap) { //    
+function mapRandomSearch(makeAmap) {     
     countMap=0;
     for(let i=0; i<10000;i++){
-        let firstNine=Math.floor(Math.random()*(116700070-116690070+1)+116690070).toString();
+        //let firstNine=Math.floor(Math.random()*(116700070-116690070+1)+116690070).toString(); //wide range
+        let firstNine=Math.floor(Math.random()*(116690916-116690070+1)+116690070).toString(); //for more results
         if (makeAmap.has(firstNine)==true) {
                 countMap++
             } 
