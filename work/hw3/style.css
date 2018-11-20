@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background:transparent;
+  font-family: Helvetica, sans-serif;
+}
+.kontrol {
+  position: absolute;
+}
+
+.blob {
+  display: inline-block;
+  width: 294.4px;
+  height: 256px;
+}
+
+.anime {
+  border-radius: 50%;
+  border: 6.4px solid #fafafb;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 152px;
+  top: 48px;
+}
+.anime.kafa {
+  border-color: rgb(0, 0, 0);
+  left: 118px;
+}
+.anime.govde {
+  border-color: rgb(37, 34, 204);
+  width: 64px;
+  height: 84px;
+  top: 110px;
+  left: 100px;
+}
+.anime.el {
+  border-color: rgb(255, 5, 5);
+  top: 128px;
+  left: 204px;
+}
+.anime.el.sol {
+  left: 36px;
+  border-color: rgb(40, 216, 17);
+}
+.anime.ayak {
+  border-color: rgb(21, 230, 219);
+  top: 240px;
+  left: 76px;
+}
+.anime.ayak.sag {
+  left: 156px;
+  border-color: rgb(255, 217, 1);
+}
+.halka {
+  list-style: none;
+  left: 50%;
+  margin: -9.75em -20.5em;
+  position: absolute;
+  top: 50%;
+}
+.halka li {
+  position: absolute;
+  margin-top: 16px;
+  margin-left: 16px;
+  border-radius: 16px;
+  width: 192px;
+  height: 192px;
+  font-size: 16px;
+}
+.halka li:before, .halka li:after {
+  position: absolute;
+  border-radius: 96px;
+}
+.halka li:before {
+  display: block;
+  content: "";
+}
+
+.halka li:after {
+  border: 18.4px solid #000;
+  bottom: 0;
+  content: "";
+  display: block;
+  right: -1.6px;
+  left: -1.6px;
+  top: -1.6px;
+}
+.halka .mavi {
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+.halka .sari {
+  left: 108.8px;
+  top: 91.2px;
+  z-index: 20;
+}
+.halka .siyah {
+  left: 217.6px;
+  top: 0;
+  z-index: 21;
+}
+.halka .yesil {
+  left: 326.4px;
+  top: 91.2px;
+  z-index: 20;
+}
+.halka .kirmizi {
+  left: 435.2px;
+  top: 0;
+  z-index: 10;
+}
+.halka .siyah:after {
+  border-color: #000;
+}
+.halka .mavi:after {
+  border-color: #117fcd;
+}
+.halka .yesil:after {
+  border-color: #00a650;
+}
+.halka .kirmizi:after {
+  border-color: #ee2049;
+}
+.halka .sari:after {
+  border-color: #f9a91f;
+}
+.halka .mavi.zincir {
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  z-index: 24;
+}
+.halka .mavi.zincir:before, .halka .mavi.zincir:after {
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+.halka .yesil.zincir {
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  z-index: 23;
+}
+.halka .yesil.zincir:before, .halka .yesil.zincir:after {
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+.halka .kirmizi.zincir {
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  z-index: 23;
+}
+.halka .kirmizi.zincir:before, .halka .kirmizi.zincir:after {
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+.halka .sari.zincir {
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  z-index: 23;
+}
+.halka .sari.zincir:before, .halka .sari.zincir:after {
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+
