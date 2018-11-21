@@ -149,9 +149,12 @@ parseStudent(line){
 }
 printTable(){
     var counter=1;
+	var html="";
+	html+="<tr><th></th><th>id</th><th>name</th><th>gpa</th><th>count</th><th>courses</th></tr>";
     let stu=db.Students;
     for(let a of stu){
         let b=Array.from(a);
+	    html+="<tr><th></th><th>id</th><th>name</th><th>gpa</th><th>count</th><th>courses</th></tr>";
             for (var i = 1; i < 2; i++) {
                 if(b[i].name!=undefined){
                 let c=b[i].courses;
@@ -229,7 +232,6 @@ Example Link<br><textarea id="example" style="width:250px; height: 85px;">https:
 <hr />
 <p id="sample"></p>
 <script>
-    var html="<tr><th></th><th>id</th><th>name</th><th>gpa</th><th>count</th><th>courses</th></tr>";
     title.innerText = document.title;
     db = new Database();
     sample.innerText=db.printTable;
