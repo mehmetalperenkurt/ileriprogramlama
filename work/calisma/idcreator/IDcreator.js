@@ -44,3 +44,6 @@ function creator(n){
         return outVal.innerHTML="false id"
       }
     }
+if(window.innerWidth<window.innerHeight){
+alert("ekranı yatırın");
+}
