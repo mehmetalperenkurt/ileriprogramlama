@@ -1,0 +1,192 @@
+<html>
+<head>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AdvancedProgramming</title>
+</head>
+<script>
+    if ('serviceWorker' in navigator) {
+     navigator.serviceWorker
+       .register('sw.js')
+       .then((reg) => { console.log('SW Registered', reg) })
+       .catch(console.log)
+   }
+</script>
+
+<style type="text/css">
+body {
+    font-family: "Lato", sans-serif;
+}
+.btn-group .button {
+    background-color: #4CAF50; /* Green */
+    border: 0px solid green;
+    color: white;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+.btn-group .button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+.btn-group .button:hover {
+    background-color: #3e8e41;
+}
+
+.main {
+    margin-left: 140px; /*140px Same width as the sidebar + left position in px */
+    font-size: 28px; /* Increased text to enable scrolling width: auto !important;*/
+    padding: 0px 10px;
+}
+.tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:100%;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:80%;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-baqh{text-align:center;vertical-align:top;border-width:2px;background-color: #2196F3;font-size:150%;}
+.tg .tg-0lax{text-align:left;vertical-align:top;border-width:0px;font-size:130%;}
+.tg .tg-1lax{text-align:center;vertical-align:center;border-width:0px;font-size:130%;}
+.tg .tg-2lax{text-align:left;vertical-align:center;border-width:0px;font-size:130%;}
+
+
+@media screen and (max-width: 600px) {
+  .tg {width: auto !important;} 
+  .tg col {width: auto !important;}
+  .tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px; margin-left: 0px;}
+  }
+</style>
+<script>
+</script>
+<body>
+<div class="tg-wrap"><div class="btn-group">
+  <table class="tg">
+   <tr><th class="tg-baqh" colspan="3">#classwork assignments</th></tr>
+   <tr>
+      <th class="tg-0lax">CW_8 -coming soon-</th>
+      <th class="tg-1lax"><input type=button value="public" class="w3-button w3-disabled" title="" onclick="window.location.href=''"></th>
+      <th class="tg-1lax"><input type=button value="source" class="w3-button w3-disabled" title="" onclick="window.location.href=''"></th>
+    </tr>
+  <tr>
+    <th class="tg-0lax">CW_7 map to HTML table</th>
+    <th class="tg-1lax"><input type=button value="public" class="button" title="https://mehmetalperenkurt.github.io/ileriprogramlama/cw7/cw7.html" onclick="window.open('https://mehmetalperenkurt.github.io/ileriprogramlama/cw7/cw7.html')"></th>
+    <th class="tg-1lax"><input type=button value="source" class="button" title="https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/cw7/cw7.html" onclick="window.open('https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/cw7/cw7.html')"></th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">CW_6 timing compare</td>
+    <td class="tg-1lax"><input type="button" value="public" class="button" title="https://mehmetalperenkurt.github.io/ileriprogramlama/work/cw6/cw6.html" onclick="window.open('https://mehmetalperenkurt.github.io/ileriprogramlama/work/cw6/cw6.html')"></td>
+    <td class="tg-1lax"><input type="button" value="source" class="button" title="https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/work/cw6/database.js" onclick="window.open('https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/work/cw6/database.js')"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">CW_5 fetch & fileReader</td>
+    <td class="tg-1lax"><input type="button" value="public" class="button" title="https://mehmetalperenkurt.github.io/ileriprogramlama/work/cw5/compare.html" onclick="window.open('https://mehmetalperenkurt.github.io/ileriprogramlama/work/cw5/compare.html')"></td>
+    <td class="tg-1lax"><input type="button" value="source" class="button" title="https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/work/cw5/compare.html" onclick="window.open('https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/work/cw5/compare.html')"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">CW_4 inspector</td>
+    <td class="tg-1lax"><input type="button" value="public" class="button" title="https://mehmetalperenkurt.github.io/ileriprogramlama/inspector.html" onclick="window.open('https://mehmetalperenkurt.github.io/ileriprogramlama/inspector.html')"></td>
+    <td class="tg-1lax"><input type="button" value="source" class="button" title="https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/c4_data.js" onclick="window.open('https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/c4_data.js')"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">CW_3 class demo</td>
+    <td class="tg-1lax"><input type="button" value="public" class="button" title="https://mehmetalperenkurt.github.io/ileriprogramlama/work/index.html" onclick="window.open('https://mehmetalperenkurt.github.io/ileriprogramlama/work/index.html')"></td>
+    <td class="tg-1lax"><input type="button" value="source" class="button" title="https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/work/database.js" onclick="window.open('https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/work/database.js')"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">CW_2 array sample</td>
+    <td class="tg-1lax"><input type="button" value="public" class="button" title="https://mehmetalperenkurt.github.io/ileriprogramlama/CW2_Array_Demo.html" onclick="window.open('https://mehmetalperenkurt.github.io/ileriprogramlama/CW2_Array_Demo.html')"></td>
+    <td class="tg-1lax"><input type="button" value="source" class="button" title="https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/CW2_Array_Demo.html" onclick="window.open('https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/CW2_Array_Demo.html')"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" colspan="3">#homework assignments</td>
+  </tr>
+  <tr>
+      <td class="tg-0lax">HW_4b -coming soon-</td>
+      <td class="tg-1lax"><input type="button" value="public" class="w3-button w3-disabled" title="" onclick="window.location.href=''"disabled></td>
+      <td class="tg-1lax"><input type="button" value="source" class="w3-button w3-disabled" title="" onclick="window.location.href=''"disabled></td>
+    </tr>
+  <tr>
+      <td class="tg-0lax">HW_4a pwa </td>
+      <td class="tg-1lax"><input type="button" value="public" class="button" title="https://mehmetalperenkurt.github.io/ileriprogramlama/work/hw3/index.html" onclick="window.open('https://mehmetalperenkurt.github.io/ileriprogramlama/work/hw3/index.html')"></td>
+      <td class="tg-1lax"><input type="button" value="source" class="button" title="https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/work/hw3/index.js" onclick="window.open('https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/work/hw3/index.js')"></td>
+    </tr>
+  <tr>
+    <td class="tg-0lax">HW_3 element.animate</td>
+    <td class="tg-1lax"><input type="button" value="public" class="button" title="https://mehmetalperenkurt.github.io/ileriprogramlama/work/hw3/index.html" onclick="window.open('https://mehmetalperenkurt.github.io/ileriprogramlama/work/hw3/index.html')"></td>
+    <td class="tg-1lax"><input type="button" value="source" class="button" title="https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/work/hw3/index.js" onclick="window.open('https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/work/hw3/index.js')"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">HW_2 map Sample</td>
+    <td class="tg-1lax"><input type="button" value="public" class="button" title="https://mehmetalperenkurt.github.io/ileriprogramlama/work/hw2/index.html" onclick="window.open('https://mehmetalperenkurt.github.io/ileriprogramlama/work/hw2/index.html')"></td>
+    <td class="tg-1lax"><input type="button" value="source" class="button" title="https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/work/hw2/database.js" onclick="window.open('https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/work/hw2/database.js')"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">HW_1 array Sample</td>
+    <td class="tg-1lax"><input type="button" value="public" class="button" title="https://mehmetalperenkurt.github.io/ileriprogramlama/HW1.html" onclick="window.open('https://mehmetalperenkurt.github.io/ileriprogramlama/HW1.html')"></td>
+    <td class="tg-1lax"><input type="button" value="source" class="button" title="https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/HW1.html" onclick="window.open('https://github.com/mehmetalperenkurt/ileriprogramlama/blob/master/HW1.html')"></td>
+  </tr>
+  <tr>
+      <td class="tg-baqh" colspan="3">#useful links</td>
+  </tr>
+  <tr>
+      <td class="tg-2lax" colspan="2">&raquo;<a title="https://developer.mozilla.org/en-US/docs/Web/JavaScript" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">developer.mozilla</a></td>
+  </tr>
+  <tr>
+      <td class="tg-2lax" colspan="2">&raquo;<a title="https://www.w3schools.com/js/" href="https://www.w3schools.com/js/">w3schools</a></td>
+  </tr>
+  <tr>
+      <td class="tg-2lax" colspan="3">&raquo;<a title="https://www.tutorialspoint.com/javascript/" href="https://www.tutorialspoint.com/javascript/">tutorialspoint</a></td>
+  </tr>
+  <tr>
+      <td class="tg-2lax" colspan="3">&raquo;<a title="https://javascript.info/" href="https://javascript.info/">javascript.info</a></td>
+  </tr>
+  <tr>
+      <td class="tg-2lax" colspan="3">&raquo;<a title="https://www.javatpoint.com/javascript-tutorial" href="https://www.javatpoint.com/javascript-tutorial">javatpoint</a></td>
+  </tr>
+  <tr>
+      <td class="tg-2lax" colspan="3">&raquo;<a title="https://eloquentjavascript.net/" href="https://eloquentjavascript.net/">Eloquent E-Book</a></td>
+  </tr>
+  <tr>
+      <td class="tg-2lax" colspan="3">&raquo;<a title="https://maeyler.github.io/JS/PWA" href="https://maeyler.github.io/JS/PWA">How to make PWA</a></td>
+  </tr>
+  <tr>
+      <td class="tg-baqh" colspan="3">#blm305 links</td>
+  </tr>
+  <tr>
+      <td class="tg-2lax" colspan="2">&raquo;<a title="https://github.com/maeyler/BLM305/" href="https://github.com/maeyler/BLM305/">Repository</a></td>
+  </tr>
+  <tr>
+      <td class="tg-2lax" colspan="2">&raquo;<a title="https://maeyler.github.io/JS/" href="https://maeyler.github.io/JS/">JS examples</a></td>
+  </tr>
+  <tr>
+      <td class="tg-2lax" colspan="3">&raquo;<a title="https://maeyler.github.io/BLM305/inspect.html" href="https://maeyler.github.io/BLM305/inspect.html">Inspector</a></td>
+  </tr>
+  <tr>
+      <td class="tg-2lax" colspan="3">&raquo;<a title="https://maeyler.github.io/BLM305/Course_outline.html" href="https://maeyler.github.io/BLM305/Course_outline.html">Course Outline</a></td>
+  </tr>
+  <tr>
+      <td class="tg-2lax" colspan="3">&raquo;<a title="https://groups.google.com/forum/#!forum/fsmvu-mae/join" href="https://groups.google.com/forum/#!forum/fsmvu-mae/join">Mail Group</a></td>
+  </tr>
+  <tr>
+      <td class="tg-baqh" colspan="3">#tools</td>
+  </tr>
+  <tr>
+      <td class="tg-2lax" colspan="2">&raquo;<a title="https://github.com/" href="https://github.com/">Github</a></td>
+  </tr>
+  <tr>
+      <td class="tg-2lax" colspan="2">&raquo;<a title="https://www.gitkraken.com/" href="https://www.gitkraken.com/">GitKraken</a></td>
+  </tr>
+  <tr>
+      <td class="tg-2lax" colspan="3">&raquo;<a title="https://code.visualstudio.com/download" href="https://code.visualstudio.com/download">Visual Studio Code</a></td>
+  </tr>
+  <tr>
+      <td class="tg-2lax" colspan="3">&raquo;<a title="https://www.sublimetext.com/3" href="https://www.sublimetext.com/3">Sublime Text</a></td>
+  </tr>
+  <tr>
+      <td class="tg-2lax" colspan="3">&raquo;<a title="https://www.google.com/chrome/" href="https://www.google.com/chrome/">Chrome</a></td>
+  </tr>
+</table>
+</div></div></div>
+</body>
+</html>

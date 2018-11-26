@@ -1,0 +1,13 @@
+{
+  "name": "advancedProgramming",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "cyan",
+  "icons": [
+    {
+      "src": "mak.png",
+      "sizes": "274x268",
+      "type": "image/png"
+    }
+  ]
+}
