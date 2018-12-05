@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SVG and Canvas </title>
+
+  <style>
+    svg, canvas {
+        background: transparent;
+        font: 10px arial, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+<h2>Using Canvas</h2>
+<strong>Shape1
+
+  stroke color<input type="color" id="picker1" value="#ae5454" onchange="draw()">
+  fill color<input type="color" id="picker2" value="#fffff" onchange="draw()">
+<br>
+
+  X coordinate<input type="range" id="range1" min="10" max="500" value="50" onchange="show1(),draw()"><label id="slider1"></label>px<br>
+  Y coordinate<input type="range" id="range11" min="10" max="500" value="50" onchange="show11(),draw()"><label id="slider11"></label>px
+<br> 
+thickness<input type="range" id="range111" min="0" max="20" value="5" onchange="show111(),draw()"><label id="slider111"></label>px
+
+<br>
+Shape2
+  stroke color<input type="color" id="picker3" value="#ff6347" onchange="draw()">
+  fill color<input type="color" id="picker4" value="#d3d3d3" onchange="draw()">
+<br>
+
+  X coordinate<input type="range" id="range2" min="10" max="500" value="110" onchange="show2(),draw()"><label id="slider2"></label>px<br>
+  Y coordinate<input type="range" id="range22" min="10" max="500" value="10" onchange="show22(),draw()"><label id="slider22"></label>px
+<br> 
+thickness<input type="range" id="range222" min="0" max="20" value="5" onchange="show222(),draw()"><label id="slider222"></label>px
+
+<br>
+<canvas id=canvas width="700px" height="500px"></canvas>
+<p>Canvas is an image drawn by JavaScript</p>
+<pre id=sample></pre>
+<hr />
+
+
+<script>
+"use strict";
+function draw() {
+    cx.clearRect(0, 0, canvas.width, canvas.height);
+    cx.beginPath(); 
+    cx.lineWidth = document.getElementById("range111").value;
+    cx.fillStyle = document.getElementById("picker1").value; 
+    cx.strokeStyle = document.getElementById("picker2").value;
+    cx.arc(document.getElementById("range1").value , document.getElementById("range11").value, 40, 0, 2*Math.PI);
+    cx.fill(); 
+    cx.stroke();
+    cx.fillStyle = "black"; 
+    cx.fillText("shape1",document.getElementById("range1").value,document.getElementById("range11").value);
+
+    cx.beginPath(); 
+    cx.lineWidth = document.getElementById("range222").value;
+    cx.fillStyle = document.getElementById("picker3").value; 
+    cx.strokeStyle = document.getElementById("picker4").value; 
+    cx.rect(document.getElementById("range2").value, document.getElementById("range22").value, 100, 80);
+    cx.fill(); 
+    cx.stroke();
+    cx.fillStyle = "black"; 
+    cx.fillText("shape2",document.getElementById("range2").value,document.getElementById("range22").value);
+}
+    const cx = canvas.getContext("2d");
+    draw();
+function show1(){
+var slider = document.getElementById("range1").value;
+slider1.innerHTML = slider;
+}
+function show2(){
+var slider = document.getElementById("range2").value;
+
+slider2.innerHTML = slider;
+}
+function show11(){
+var slider = document.getElementById("range11").value;
+
+slider11.innerHTML = slider;
+}
+
+function show22(){
+var slider = document.getElementById("range22").value;
+
+slider22.innerHTML = slider;
+}
+function show111(){
+var slider = document.getElementById("range111").value;
+
+slider111.innerHTML = slider;
+}
+function show222(){
+var slider = document.getElementById("range222").value;
+
+slider222.innerHTML = slider;
+}
+
+
+output1.innerHTML = slider.value;
+
+
+slider.oninput = function() {
+output.innerHTML = this.value;
+}
+</script>
+
+</body>
+</html>
+
