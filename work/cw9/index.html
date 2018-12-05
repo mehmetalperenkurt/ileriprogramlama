@@ -24,7 +24,7 @@
   X coordinate<input type="range" id="range1" min="10" max="500" value="50" onchange="show1(),draw()"><label id="slider1"></label>px<br>
   Y coordinate<input type="range" id="range11" min="10" max="500" value="50" onchange="show11(),draw()"><label id="slider11"></label>px
 <br> 
-thickness<input type="range" id="range111" min="0" max="20" value="5" onchange="show111(),draw()"><label id="slider111"></label>px
+thickness<input type="range" id="range111" min="1" max="20" value="4" onchange="show111(),draw()"><label id="slider111"></label>px
 
 <br>
 Shape2
@@ -35,7 +35,7 @@ Shape2
   X coordinate<input type="range" id="range2" min="10" max="500" value="110" onchange="show2(),draw()"><label id="slider2"></label>px<br>
   Y coordinate<input type="range" id="range22" min="10" max="500" value="10" onchange="show22(),draw()"><label id="slider22"></label>px
 <br> 
-thickness<input type="range" id="range222" min="0" max="20" value="5" onchange="show222(),draw()"><label id="slider222"></label>px
+thickness<input type="range" id="range222" min="1" max="20" value="4" onchange="show222(),draw()"><label id="slider222"></label>px
 
 <br>
 <canvas id=canvas width="700px" height="500px"></canvas>
@@ -67,7 +67,8 @@ function draw() {
     cx.stroke();
     cx.fillStyle = "black"; 
     cx.fillText("shape2",document.getElementById("range2").value,document.getElementById("range22").value);
-}
+}   
+    show1();show11();show111();show2();show22();show222();
     const cx = canvas.getContext("2d");
     draw();
 function show1(){
