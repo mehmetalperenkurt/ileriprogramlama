@@ -1,0 +1,152 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>booking </title>
+    </head>
+
+    <body>
+            <div style="margin-top: 5%; margin-left: 20%;"><h2 id=title>flight booking</h2>Depart<input type="search" list="departLocation">
+            <datalist id="departLocation">
+                <option value="İstanbul"></option>
+                <option value="İzmir"></option>
+                <option value="Ankara"></option>
+                <option value="Trabzon"></option>
+                <option value="Diyarbakır"></option>
+                <option value="Antalya"></option>
+                <option value="Muğla"></option>
+                <option value="Malatya"></option>
+                <option value="Sivas"></option>
+                <option value="Gaziantep"></option>
+                <option value="Şanlıurfa"></option>
+                <option value="Van"></option>
+                <option value="Giresun"></option>
+                <option value="Samsun"></option>
+                <option value="Ordu"></option>
+                <option value="Kayseri"></option>
+            </datalist>
+            Destination<input type="search" list="destinationLocation" autocomplete="on">
+            <datalist id="destinationLocation">
+                <option value="İstanbul"></option>
+                <option value="İzmir"></option>
+                <option value="Ankara"></option>
+                <option value="Trabzon"></option>
+                <option value="Diyarbakır"></option>
+                <option value="Antalya"></option>
+                <option value="Muğla"></option>
+                <option value="Malatya"></option>
+                <option value="Sivas"></option>
+                <option value="Gaziantep"></option>
+                <option value="Şanlıurfa"></option>
+                <option value="Van"></option>
+                <option value="Giresun"></option>
+                <option value="Samsun"></option>
+                <option value="Ordu"></option>
+                <option value="Kayseri"></option>
+            </datalist>
+
+        <input type="date" id="depart" name="trip-start"
+               value=""
+               min="2018-12-09" max="2019-12-12"></div>
+        
+    
+    </body>
+
+<script>
+    document.getElementById('depart').valueAsDate = new Date();
+class Flights{
+constructor(companyName,flightCode,aircraftModel,departLocation,departLocationCode,destinationLocation,destinationLocationCode,flightDates){
+        this.companyName=companyName
+        this.flightCode=flightCode
+        this.aircraftModel=aircraftModel
+        this.departLocation=departLocation
+        this.departLocationCode=departLocationCode
+        this.destinationLocation=destinationLocation 
+        this.destinationLocationCode=destinationLocationCode
+        this.flightDates=flightDates
+        //this.flightTime="";
+        //this.durationTime="";
+        //this.connection=false; 
+        //this.stationLocation=""; 
+        //this.passengerList="";
+    }
+}
+class aircraft{
+    constructor(){
+        this.schema="";
+        this.model="";
+        this.capacity="";
+        this.seats="";
+    }
+}
+class company{
+    constructor(){
+        this.name="";
+        this.fleet="";
+        this.logoURL="";
+    }
+}
+class airport{
+    constructor(){
+        this.airportCode="";
+        this.cityName="";
+        this.countryName="";
+        //this.countryCode="";
+        this.gates="";
+        //this.flightList="";
+    }
+}
+class passenger{
+    constructor(){
+        this.passNationalID="";
+        this.passName="";
+        this.passSurname="";
+        this.oldJourney=[];
+        this.currentTicket="";
+    }
+}
+class ticket{
+    constructor(){
+        this.resCode="";
+        this.from="";
+        this.to="";
+        this.gate="";
+        this.seat="";
+        this.date="";
+        this.boardingTime="";
+    }
+}
+class database{
+    constructor(){
+        this.urlS="https://mehmetalperenkurt.github.io/ileriprogramlama/work/calisma/flights.txt";
+        this.passengers=new Map();
+        this.flights= new Map();
+        this.tickets=new Map();
+        this.airports=new Map();
+        this.readFlights();
+    }
+    readFlights(){
+        console.log("readFlights "+this.urlS);
+        fetch(this.urlS)
+        .then(r => r.text())
+	    .then(r => this.addFlights(r))     
+    }
+    addFlights(txt){
+        let a = txt.split("\n");
+        for (let s of a) {
+        let flights = this.parseFlights(s);
+        this.flights.set(flights.flightCode,flights);
+        }
+    }
+    parseFlights(line){
+        let s = line.split("\t");
+        let dates = [];
+        for (let i=7; i<s.length; i++) 
+        dates.push(s[i]);
+        const flight = new Flights(s[0],s[1],s[2],s[3],s[4],s[5],s[6],dates)
+        return flight
+    }
+}
+</script>
+</html>
