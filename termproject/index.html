@@ -5,10 +5,23 @@
         <meta name="viewport" content="width=device-width">
         <title>booking </title>
     </head>
-
+<style>
+    .main{
+    background-position-x: center;
+    background-position-y: center;
+    }
+</style>
     <body>
-            <div style="margin-top: 5%; margin-left: 20%;"><h2 id=title>flight booking</h2>Depart<input type="search" list="departLocation">
-            <datalist id="departLocation">
+            <div class="main" style="align-content: center;margin-top: 5%; margin-left: 5%;"><h2 id=title>flight booking</h2>
+                <br>
+                <form action="">
+                    one way<input type="radio" name="trip" checked id="radyo" onchange="document.getElementById('depart2').disabled=true"> 
+                    round trip<input type="radio" name="trip" id="radyo2" onchange="document.getElementById('depart2').disabled=false">
+                    
+                </form>
+                <br>
+                <input type="text" id="departLocation" list="departLocationList" placeholder="From" style="width:120px" autocomplete=on required role="combobox" aria-label="Flight origin input" smarty="true" autocomplete="off" autocapitalize="off" autocorrect="off" role="combobox" aria-autocomplete="departLocation" aria-expanded="true">
+           <datalist id="departLocationList">
                 <option value="İstanbul"></option>
                 <option value="İzmir"></option>
                 <option value="Ankara"></option>
@@ -26,7 +39,7 @@
                 <option value="Ordu"></option>
                 <option value="Kayseri"></option>
             </datalist>
-            Destination<input type="search" list="destinationLocation" autocomplete="on">
+            <input type="text" list="destinationLocation" placeholder="To" autocomplete="on" style="width: 120px" autocomplete=off required>
             <datalist id="destinationLocation">
                 <option value="İstanbul"></option>
                 <option value="İzmir"></option>
@@ -46,15 +59,32 @@
                 <option value="Kayseri"></option>
             </datalist>
 
-        <input type="date" id="depart" name="trip-start"
-               value=""
-               min="2018-12-09" max="2019-12-12"></div>
+        <input type="date" id="depart" name="trip-start" value="" min="2018-12-09" max="2019-12-12">
+        <input type="date" id="depart2" name="trip-start" value="" min="2018-12-09" max="2019-12-12" disabled>
+        <input type="button" value="search">
+    </div>
         
-    
+    <br>
+    <p id=out></p>
     </body>
 
 <script>
-    document.getElementById('depart').valueAsDate = new Date();
+ /*<template id="resultstemplate">    </template>
+ var search = document.querySelector('#departLocation');
+    var results = document.querySelector('#departLocationList');
+    var templateContent = document.querySelector('#resultstemplate').content;
+    search.addEventListener('keyup', function handler(event) {
+    while (results.children.length) results.removeChild(results.firstChild);
+    var inputVal = new RegExp(search.value.trim(), 'i');
+    var clonedOptions = templateContent.cloneNode(true);
+    var set = Array.prototype.reduce.call(clonedOptions.children, function searchFilter(frag, el) {
+        if (inputVal.test(el.textContent) && frag.children.length < 4) frag.appendChild(el);
+        return frag;
+    }, document.createDocumentFragment());
+    results.appendChild(set);
+});*/ 
+document.getElementById('depart').valueAsDate = new Date();
+
 class Flights{
 constructor(companyName,flightCode,aircraftModel,departLocation,departLocationCode,destinationLocation,destinationLocationCode,flightDates){
         this.companyName=companyName
@@ -148,5 +178,11 @@ class database{
         return flight
     }
 }
+ac=new database();
+
 </script>
 </html>
+<script>
+setInterval(function(){ const out=ac.flights.size; document.getElementById('out').innerHTML=+""+out+" flights found."; }, 3000);
+
+</script>
