@@ -20,8 +20,8 @@
                     
                 </form>
                 <br>
-                <input type="text" id="departLocation" list="departLocationList" placeholder="From" style="width:120px" autocomplete=on required role="combobox" aria-label="Flight origin input" smarty="true" autocomplete="off" autocapitalize="off" autocorrect="off" role="combobox" aria-autocomplete="departLocation" aria-expanded="true">
-           <datalist id="departLocationList">
+            <input type="text" id="departLocation" list="departLocationList" placeholder="From" style="width:120px" autocomplete=on required role="combobox" aria-label="Flight origin input" smarty="true" autocomplete="off" autocapitalize="off" autocorrect="off" role="combobox" aria-autocomplete="departLocation" aria-expanded="true">
+                <datalist id="departLocationList">
                 <option value="İstanbul"></option>
                 <option value="İzmir"></option>
                 <option value="Ankara"></option>
@@ -38,9 +38,10 @@
                 <option value="Samsun"></option>
                 <option value="Ordu"></option>
                 <option value="Kayseri"></option>
-            </datalist>
-            <input type="text" list="destinationLocation" placeholder="To" autocomplete="on" style="width: 120px" autocomplete=off required>
-            <datalist id="destinationLocation">
+                </datalist>
+            <input type="button" value="<->" onclick="tooglesw()">
+            <input type="text" id="destinationLocationId" list="destinationLocation" placeholder="To" autocomplete="on" style="width: 120px" autocomplete=off required>
+                <datalist id="destinationLocation">
                 <option value="İstanbul"></option>
                 <option value="İzmir"></option>
                 <option value="Ankara"></option>
@@ -57,11 +58,14 @@
                 <option value="Samsun"></option>
                 <option value="Ordu"></option>
                 <option value="Kayseri"></option>
-            </datalist>
+                </datalist>
 
         <input type="date" id="depart" name="trip-start" value="" min="2018-12-09" max="2019-12-12">
         <input type="date" id="depart2" name="trip-start" value="" min="2018-12-09" max="2019-12-12" disabled>
         <input type="button" value="search">
+        <br>
+        adults<input type="number" step="1" value="1" min="1" max="5">
+        childs<input type="number" step="1" min="0" max="3" placeholder="0">
     </div>
         
     <br>
@@ -69,6 +73,14 @@
     </body>
 
 <script>
+function tooglesw(){
+    
+    var c=document.getElementById('departLocation').value;
+    var d=document.getElementById('destinationLocationId').value;
+    document.getElementById('departLocation').value=d;
+    document.getElementById('destinationLocationId').value=c;
+    
+}
  /*<template id="resultstemplate">    </template>
  var search = document.querySelector('#departLocation');
     var results = document.querySelector('#departLocationList');
