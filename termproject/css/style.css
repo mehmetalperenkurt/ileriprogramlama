@@ -37,21 +37,51 @@
 	margin-right: auto;
 	background: #2d343b;
 }
-
+.result-form .result-flight2 {
+    margin: auto;
+    position: relative;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    background-color:#000000;
+    padding-bottom: 35px;
+}
+.result-flight2:hover {
+    background-color: #727577;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+.pResult:hover {
+    background-color: #000000;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+}
+.resultBorder{
+    border: 2px;
+    border-color: #f7c411;
+    border-radius: 5px;
+}
+.pResult {
+    margin-top: 10px;
+    background-color: #1a1f24;
+    text-align: center;
+    font-size: 18px;
+    color: antiquewhite;
+}
 .booking-form .form-header {
-	padding: 23px;
+	padding: 18px;
 	margin: 0px -40px 30px;
 	background: #1a1f24;
 }
 .result-form .form-header {
-	padding: 23px;
+	padding: 18px;
 	margin: 0px -40px 30px;
 	background: #1a1f24;
 }
 .result-form .form-header h1 {
 	font-weight: 700;
 	text-transform: capitalize;
-	font-size: 32px;
+	font-size: 26px;
 	margin: 0;
 	color: #fff;
 }
@@ -59,7 +89,7 @@
 .booking-form .form-header h1 {
 	font-weight: 700;
 	text-transform: capitalize;
-	font-size: 32px;
+	font-size: 26px;
 	margin: 0;
 	color: #fff;
 }
@@ -229,6 +259,17 @@
     font-weight: 700;
     font-size: 75%;
 	height: 50px;
+	width: 100%;
+	border: none;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+.result-form .tgl-btn-book {
+	color: #1c2126;
+	background-color: #f7c411;
+    font-weight: 1000;
+    font-size: 75%;
+	height: 35px;
 	width: 100%;
 	border: none;
     padding: 0px;

@@ -35,7 +35,7 @@
 							</div>
 							<div class="form-group input-not-empty">
 								
-								<input class="form-control" type="text" id="departLocation" autocom list="departLocationList" placeholder="City or IATA code" autocomplete="off" autocapitalize="off" autocorrect="off" role="combobox" required>
+								<input class="form-control" type="text" id="departLocation" autocom list="departLocationList" placeholder="City or Airport code" autocomplete="off" autocapitalize="off" autocorrect="off" role="combobox" required>
 									<datalist id="departLocationList">
                 					</datalist>
 								<span class="form-label">Flying from</span>
@@ -44,7 +44,7 @@
 							<div class="row">
 								<div class="col-md-10">
 									<div class="form-group input-not-empty">
-										<input class="form-control" id="destinationLocationId" list="destinationLocationList" placeholder="City or IATA code" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" role="combobox" required> 
+										<input class="form-control" id="destinationLocationId" list="destinationLocationList" placeholder="City or Airport code" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" role="combobox" required> 
 											<datalist id="destinationLocationList">
                 							</datalist>
 										<span class="form-label">Flying to</span>
@@ -105,7 +105,9 @@
 							</div>
 									<input id="hiddenHour" type="hidden" value> 
         							<input id="txtDepartDate" type="hidden" value="">
-        							<input id="hiddenAdultCount" type="hidden" value="">
+									<input id="hiddenDepartLoc" type="hidden" value="">
+        							<input id="hiddenDestLoc" type="hidden" value="">
+									<input id="hiddenAdultCount" type="hidden" value="">
         							<input id="hiddenChildCount" type="hidden" value="">
        								<input id="hiddenFlightCode" type="hidden" value="">
 									<input id="txtSeatNumber" type="hidden" value="">
@@ -117,18 +119,21 @@
 				<div class="form-header">
 					<h1>Set Trip</h1><p id=out style="color: #fff;"></p> 
 				</div>
+
+	<div id="result-flight" class="result-form">
+		
+	</div>
+	
 				
 				<div id="div-customer" style="display:none; color: #fff;" class="main">
-        
-            
         		</div>
-				<div id="result-flight" style="display:none; color: #fff;" class="main">
-            
+				
+
         		</div>
 			</div>
 		</div>
 		
-	</div>
+	
 	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 	
 
@@ -168,13 +173,16 @@
     }
 }
 	class ticket{
-    	constructor(guid,resCode,seats,date,boardingTime, passenger){
+    	constructor(guid,resCode,seats,date,boardingTime, passenger,departLocation,destinationLocation){
         	this.guid=guid;
         	this.resCode=resCode;
         	this.seats=seats;
         	this.date=date;
         	this.boardingTime=boardingTime;
-        	this.passenger = passenger;
+			this.passenger = passenger;
+			this.departLocation=departLocation;
+			this.destinationLocation=destinationLocation;
+        	
     }
 }
 class database{
@@ -213,7 +221,7 @@ class database{
         let arr=Array.from(ac.airports);
         var list='';
         for(var i = 0; i < arr.length; i++)
-        list += '<option value="'+arr[i]+'" />';
+        list += '<option value="'+arr[i]+'"/>';
         document.getElementById('departLocationList').innerHTML = list;
         document.getElementById('destinationLocationList').innerHTML=list;
     }
@@ -232,13 +240,15 @@ class database{
     var seatTextList = document.getElementById('txtSeatNumber').value.split(',');
     var currentHour = document.getElementById('hiddenHour').value;
     var currentDate = document.getElementById('txtDepartDate').value;
-    var flightCode = document.getElementById('hiddenFlightCode').value;
+	var flightCode = document.getElementById('hiddenFlightCode').value;
+	var currentDepart = document.getElementById('departLocation').value.toUpperCase();
+	var currentDestination = document.getElementById('destinationLocationId').value.toUpperCase();
     for(var i=0; i< seatTextList.length; i++){
         var currentSeat = seatTextList[i];
         var currentCustomer = document.getElementById('customer'+(i+1)).value;
         var ticketCode= currentDate+" "+currentHour+" "+flightCode + " " + currentSeat;
         var ticketGuid = guid();
-        const ticket11 =new ticket(ticketGuid,flightCode,currentSeat,currentDate,currentHour, currentCustomer);
+        const ticket11 =new ticket(ticketGuid,flightCode,currentSeat,currentDate,currentHour, currentCustomer,currentDepart,currentDestination);
         ac.tickets.set(ticketCode, ticket11);
     }
     document.getElementById("div-customer").style.display = "none";}
@@ -249,8 +259,9 @@ function getFlightHours(){
     document.getElementById('div-customer').setAttribute("style","display:none;");
 	var departure =  document.getElementById('departLocation').value.split(' ')[0];
     var destination = document.getElementById('destinationLocationId').value.split(' ')[0];
-    
-    var departDate = document.getElementById('depart').value;
+	document.getElementById('hiddenDepartLoc').value=departure;
+	document.getElementById('hiddenDestLoc').value=destination;
+	var departDate = document.getElementById('depart').value;
     var adultCount = document.getElementById('txtAdultCount').value;
     var childCount = document.getElementById('txtChildCount').value;
     document.getElementById('txtDepartDate').value = departDate;
@@ -274,14 +285,16 @@ function getFlightHours(){
     }
 }
 var appendToLi = function(flightDates, flightCode){
-	
+	var departLoc= document.getElementById('hiddenDepartLoc').value;
+	var destLoc= document.getElementById('hiddenDestLoc').value;
+
     var $html = "";
-    $html += "<ul>";
+    $html += "";
     flightDates.forEach(element => {
-        
-        $html += "<li><a onclick='setTicket(this)' flightCode='"+flightCode+"'>"+element+"</a></li>";
+        $html += "<div id='result-flight2' class='row pResult result-flight2 result-form'><div class='col-md-3'>"+element+"</div><div  class='col-md-3'>"+departLoc+"</div><div  class='col-md-3'>"+destLoc+"</div><div  class='col-md-3'><input type='button' class='tgl-btn-book' value='BOOK' flightCode='"+flightCode+"' resultHiddenHour='"+element+"' onclick='setTicket(this)'></div></div>";
+        //$html += "<li><a class='set-ticket' onclick='setTicket(this)' flightCode='"+flightCode+"'>"+element+"</a></li>";
     });
-    $html+= "</ul>";
+    $html+= "";
     document.getElementById("result-flight").style.display = "block";
     document.getElementById("result-flight").innerHTML = "";
     document.getElementById("result-flight").innerHTML = $html;
@@ -294,9 +307,10 @@ var appendToLi = function(flightDates, flightCode){
 var setTicket = function(e){
     
     var availableList = [];
-    var hour = e.innerText;
+	//var hour = e.innerText;
+	var hour = e.getAttribute('resultHiddenHour');
     document.getElementById('hiddenHour').value = hour;
-     
+
     var flightCode = e.getAttribute('flightCode');
     document.getElementById('hiddenFlightCode').value = flightCode;
     var departDate = document.getElementById('txtDepartDate').value;
@@ -477,10 +491,15 @@ var clearForm = function(){
 	document.getElementById("div-customer").style.display = "none";
 	document.getElementById("result-flight").style.display = "none";
 	document.getElementById("txtChildCount").value="0";
+	document.getElementById("result-form").style.display = "none";
+
 	
 
 }
 	</script>
+
+
+
 
 </body>
 </html>
