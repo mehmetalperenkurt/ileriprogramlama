@@ -125,7 +125,13 @@
 	</div>
 	
 				
-				<div id="div-customer" style="display:none; color: #fff;" class="main">
+				<div id="div-customer" style="display:none;" class="booking-form">
+					<div class='col-md-8'>
+						<div class='form-group input-not-empty'>
+							<input class='form-control' type='text' autocomplete='off' autocapitalize='off' autocorrect='off' required> 
+							<span class='form-label'>FAlan</span>
+						</div>
+					</div>
         		</div>
 				
 
@@ -231,7 +237,7 @@ class database{
 	var customerNameCnt=[];
 	var countCnt=adultCnt+childCnt;
 	for(let i=0;i<countCnt;i++){
-	var j=document.getElementsByClassName('fname')[i].value;
+	var j=document.getElementsByName('customerName')[i].value;
 	if(j!="") customerNameCnt.push(j);
 	}
 	//if(customerNameCnt==""||customerNameCnt==null) alert("Please fill all required fields")
@@ -356,11 +362,12 @@ var hasKey = function(ticketCode){
 var generateCustomerForm = function(seatCount){
     var $html = "";
     for(var i=0; i< seatCount; i++){
-        var count = i+1;
-        var $inputHtml = 'Passenger '+count+': <input id="customer'+count+'" type="text" name="fname" class="fname" required><br>';
+		var count = i+1;
+		var $inputHtml = "<div class='col-md-8'><div class='form-group input-not-empty'><input id='customer"+count+"' class='form-control' name='customerName' type='text' autocomplete='off' autocapitalize='off' autocorrect='off' required> <span class='form-label'>Passanger"+count+"</span></div></div>";
+        //var $inputHtml = 'Passenger '+count+': <input id="customer'+count+'" type="text" name="fname" class="fname" required><br>';
         $html += $inputHtml;
     }
-    var $btn = "<button onclick='ac.sellTicket();'>Buy Ticket</button>";
+    var $btn = "<button class='tgl-btn' onclick='ac.sellTicket();'>Buy Ticket</button>";
     $html += $btn;
     document.getElementById("div-customer").style.display = "block";
     document.getElementById("div-customer").innerHTML = "";
@@ -393,7 +400,7 @@ var getAvailableSeat = function(busySeat,allSeatList){
     }
     return allSeatList;
 }
-// Eğer birgün koltuk seçtirmek istersen kullanırsın..
+// Koltuk seçtirmek için sonra eklenecek
 var getPlaneSeat = function(){
     var list = [];
     var $html = "";
@@ -474,8 +481,6 @@ var scrollFunction= function() {
     document.getElementById("myBtn").style.display = "none";
   }
 }
-
-// When the user clicks on the button, scroll to the top of the document
 var topFunction = function() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
@@ -492,14 +497,7 @@ var clearForm = function(){
 	document.getElementById("result-flight").style.display = "none";
 	document.getElementById("txtChildCount").value="0";
 	document.getElementById("result-form").style.display = "none";
-
-	
-
 }
 	</script>
-
-
-
-
 </body>
 </html>
