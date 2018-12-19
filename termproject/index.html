@@ -133,10 +133,17 @@
 						</div>
 					</div>
         		</div>
+                <div id="showTicket" class="result-form" class="booking-form">
+                    <table id="showTicketTable" style="border:3px; border-color:white; width:100%; color:white; font-size:15px; ">
+                    </table>
+	            </div>
 				
 
         		</div>
 			</div>
+
+
+
 		</div>
 		
 	
@@ -231,6 +238,18 @@ class database{
         document.getElementById('departLocationList').innerHTML = list;
         document.getElementById('destinationLocationList').innerHTML=list;
     }
+    showTickets(){
+    var $html="";
+    for(let x of ac.tickets){
+        var item=x[1].date+" - "+x[1].boardingTime+" - "+x[1].departLocation+" - "+x[1].destinationLocation+" - "+x[1].passenger;
+        console.log(item);
+		var $inputHtml = "<tr><td>"+x[1].date+"</td><td>"+x[1].boardingTime+"</td><td>"+x[1].departLocation+"</td><td>"+x[1].destinationLocation+"</td><td>"+x[1].passenger+"</td></tr>";
+        $html += $inputHtml;
+    }
+        document.getElementById('showTicketTable').innerHTML=$html;
+    }
+    
+    
     sellTicket(){
 	var adultCnt=parseInt(document.getElementById('hiddenAdultCount').value);
     var childCnt=parseInt(document.getElementById('hiddenChildCount').value);
@@ -363,17 +382,23 @@ var generateCustomerForm = function(seatCount){
     var $html = "";
     for(var i=0; i< seatCount; i++){
 		var count = i+1;
-		var $inputHtml = "<div class='col-md-8'><div class='form-group input-not-empty'><input id='customer"+count+"' class='form-control' name='customerName' type='text' autocomplete='off' autocapitalize='off' autocorrect='off' required> <span class='form-label'>Passanger"+count+"</span></div></div>";
+		var $inputHtml = "<div class='col-md-10'><div class='form-group input-not-empty'><input id='customer"+count+"' class='form-control' name='customerName' type='text' autocomplete='off' autocapitalize='off' autocorrect='off' required> <span class='form-label'>Passanger"+count+"</span></div></div>";
         //var $inputHtml = 'Passenger '+count+': <input id="customer'+count+'" type="text" name="fname" class="fname" required><br>';
         $html += $inputHtml;
     }
-    var $btn = "<button class='tgl-btn' onclick='ac.sellTicket();'>Buy Ticket</button>";
+    var $btn = "<button class='tgl-btn' onclick='ac.sellTicket(); clearForm();'>Buy Ticket</button><br><button class='tgl-btn' onclick='ac.showTickets()'>Show Tickets</button>";
     $html += $btn;
     document.getElementById("div-customer").style.display = "block";
     document.getElementById("div-customer").innerHTML = "";
     document.getElementById("div-customer").innerHTML = $html;
     document.getElementById("result-flight").style.display = "none";
     
+}
+var showTickets = function(){
+    for(let x of ac.tickets){
+        var item=x[1].date+" - "+x[1].boardingTime+" - "+x[1].departLocation+" - "+x[1].destinationLocation+" - "+x[1].passenger;
+        console.log(item);
+    }
 }
 var getSeatByCount = function(availableList, seatCount){
     var seatTextList = "";
@@ -499,5 +524,10 @@ var clearForm = function(){
 	document.getElementById("result-form").style.display = "none";
 }
 	</script>
+    <div style="margin-bottom: -50px; ">
+    <a href="https://getbootstrap.com/docs/4.1/layout/grid/">bootstrap col-md</a><br>
+    <a href="http://guid.us/GUID/JavaScript">GUID Generator</a><br>
+    <a href="https://www.w3schools.com/howto/howto_js_scroll_to_top.asp">Scroll Function </a>
+    </div>
 </body>
 </html>
