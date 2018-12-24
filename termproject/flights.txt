@@ -1,127 +1,123 @@
-Turkish Airlines	TK1001	B737-900	IST	istanbul	ADA	adana	02:00	09:00	15:00	18:00	21:00	22:05	
-Turkish Airlines	TK1002	B737-800	IST	istanbul	ESB	ankara	03:00	11:00	15:00	19:00	22:00	23:15	
-Turkish Airlines	TK1003	B737-700	IST	istanbul	AJI	agri	02:00	09:00	16:00	18:00	21:00	22:05	
-Turkish Airlines	TK1004	B737-700	IST	istanbul	XHQ	artvin	03:00	11:00	15:00	19:00	22:00	23:15	
-Turkish Airlines	TK1005	B737-700	IST	istanbul	ERZ	erzurum	02:00	09:00	16:00	18:00	21:00	22:05	
-Turkish Airlines	TK1006	B737-700	IST	istanbul	ERC	erzincan	03:00	11:00	15:00	19:00	22:00	23:15	
-Turkish Airlines	TK1007	B737-900	IST	istanbul	ADB	izmir	02:00	09:00	15:00	18:00	21:00	22:05	
-Turkish Airlines	TK1008	B737-800	IST	istanbul	TZX	trabzon	03:00	11:00	16:00	19:00	22:00	23:15	
-Turkish Airlines	TK1009	B737-900	IST	istanbul	DIY	diyarbakir	02:00	09:00	15:00	18:00	21:00	22:05	
-Turkish Airlines	TK1010	B737-800	IST	istanbul	AYT	antalya	03:00	11:00	16:00	19:00	22:00	23:15	
-Turkish Airlines	TK1011	B737-900	IST	istanbul	DLM	mugla	02:00	09:00	15:00	18:00	21:00	22:05	
-Turkish Airlines	TK1012	B737-800	IST	istanbul	BJV	mugla	03:00	11:00	15:00	19:00	22:00	23:15	
-Turkish Airlines	TK1013	A320-200	IST	istanbul	MLX	malatya	02:00	09:00	16:00	18:00	21:00	22:05	
-Turkish Airlines	TK1014	A321-200	IST	istanbul	VAS	sivas	03:00	11:00	15:00	19:00	22:00	23:15	
-Turkish Airlines	TK1015	A320-200	IST	istanbul	VAN	van	02:00	09:00	16:00	18:00	21:00	22:05	
-Turkish Airlines	TK1016	A321-200	IST	istanbul	GZT	gaziantep	03:00	11:00	15:00	19:00	22:00	23:15	
-Turkish Airlines	TK1017	A320-200	IST	istanbul	GNY	sanliurfa	02:00	09:00	15:00	18:00	21:00	22:05	
-Turkish Airlines	TK1018	A321-200	IST	istanbul	SZF	samsun	03:00	11:00	16:00	19:00	22:00	23:15	
-Turkish Airlines	TK1019	A320-200	IST	istanbul	OGU	giresun	02:00	09:00	15:00	18:00	21:00	22:05	
-Turkish Airlines	TK1020	A321-200	IST	istanbul	ASR	kayseri	03:00	11:00	16:00	19:00	22:00	23:15	
-Turkish Airlines	TK1021	B737-900	IST	istanbul	ECN	lefkosa	02:00	09:00	15:00	18:00	21:00	22:05	
-Turkish Airlines	TK1111	B737-900	ADA	adana	IST	istanbul	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1112	B737-900	ADA	adana	ESB	ankara	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK1113	B737-900	ADA	adana	ADB	izmir	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1114	B737-900	ADA	adana	TZX	trabzon	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK1120	B737-800	ESB	ankara	IST	istanbul	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1121	B737-800	ESB	ankara	ADB	izmir	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK1122	B737-800	ESB	ankara	TZX	trabzon	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1123	B737-800	ESB	ankara	AYT	antalya	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK1124	B737-800	ESB	ankara	OGU	giresun	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1125	B737-800	ESB	ankara	ERZ	erzurum	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK1126	B737-700	AJI	agri	IST	istanbul	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1131	B737-700	AJI	agri	ESB	ankara	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK1132	B737-700	AJI	agri	ADB	izmir	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1133	B737-700	XHQ	artvin	IST	istanbul	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK1141	B737-700	XHQ	artvin	ESB	ankara	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1142	B737-700	XHQ	artvin	ADB	izmir	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK1143	B737-700	ERZ	erzurum	IST	istanbul	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1151	B737-700	ERZ	erzurum	ESB	ankara	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK1152	B737-700	ERZ	erzurum	ADB	izmir	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1153	B737-700	ERC	erzincan	IST	istanbul	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK1161	B737-700	ERC	erzincan	ESB	ankara	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1162	B737-700	ERC	erzincan	ADB	izmir	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK1163	B737-900	ADB	izmir	IST	istanbul	01:00	05:00	15:00	17:00	19:30	23:15	
-Turkish Airlines	TK1171	B737-900	ADB	izmir	ESB	ankara	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK1172	B737-900	ADB	izmir	AYT	antalya	01:00	05:00	15:00	17:00	19:30	23:15	
-Turkish Airlines	TK1173	B737-900	ADB	izmir	TZX	trabzon	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK1174	B737-900	ADB	izmir	DIY	diyarbakir	01:00	05:00	15:00	17:00	19:30	23:15	
-Turkish Airlines	TK1175	B737-900	ADB	izmir	VAN	van	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK1176	B737-900	ADB	izmir	ERZ	erzurum	01:00	05:00	15:00	17:00	19:30	23:15	
-Turkish Airlines	TK1177	B737-800	TZX	trabzon	IST	istanbul	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK1181	B737-800	TZX	trabzon	ESB	ankara	01:00	05:00	15:00	17:00	19:30	23:15	
-Turkish Airlines	TK1182	B737-800	TZX	trabzon	ADB	izmir	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK1183	B737-900	DIY	diyarbakir	IST	istanbul	01:00	05:00	15:00	17:00	19:30	23:15	
-Turkish Airlines	TK1191	B737-900	DIY	diyarbakir	ESB	ankara	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK1192	B737-900	DIY	diyarbakir	ADB	izmir	01:00	05:00	15:00	17:00	19:30	23:15	
-Turkish Airlines	TK1193	B737-800	AYT	antalya	IST	istanbul	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK1201	B737-800	AYT	antalya	ESB	ankara	01:00	05:00	15:00	17:00	19:30	23:15	
-Turkish Airlines	TK1202	B737-800	AYT	antalya	ADB	izmir	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK1203	B737-800	AYT	antalya	DIY	diyarbakir	01:00	05:00	15:00	17:00	19:30	23:15	
-Turkish Airlines	TK1204	B737-900	DLM	mugla	IST	istanbul	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK1211	B737-900	DLM	mugla	ESB	ankara	01:00	05:00	15:00	17:00	19:30	23:15	
-Turkish Airlines	TK1212	B737-900	DLM	mugla	ADB	izmir	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK1213	B737-800	BJV	mugla	IST	istanbul	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1221	B737-800	BJV	mugla	ESB	ankara	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK1222	B737-800	BJV	mugla	ADB	izmir	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1223	A320-200	MLX	malatya	IST	istanbul	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK1231	A320-200	MLX	malatya	ESB	ankara	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1232	A320-200	MLX	malatya	ADB	izmir	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK1233	A321-200	VAS	sivas	IST	istanbul	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1241	A321-200	VAS	sivas	ESB	ankara	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK1242	A321-200	VAS	sivas	ADB	izmir	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1243	A320-200	VAN	van	IST	istanbul	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK1251	A320-200	VAN	van	ESB	ankara	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1252	A320-200	VAN	van	ADB	izmir	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK1253	A321-200	GZT	gaziantep	IST	istanbul	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1261	A321-200	GZT	gaziantep	ESB	ankara	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK1262	A321-200	GZT	gaziantep	ADB	izmir	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1263	A320-200	GNY	sanliurfa	IST	istanbul	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK1271	A320-200	GNY	sanliurfa	ESB	ankara	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1272	A320-200	GNY	sanliurfa	ADB	izmir	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK1273	A321-200	SZF	samsun	IST	istanbul	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1281	A321-200	SZF	samsun	ESB	ankara	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK1282	A321-200	SZF	samsun	ADB	izmir	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK1283	A320-200	OGU	giresun	IST	istanbul	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK1291	A320-200	OGU	giresun	ESB	ankara	01:00	05:00	15:00	17:00	19:30	23:15	
-Turkish Airlines	TK1292	A320-200	OGU	giresun	ADB	izmir	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK1293	A321-200	ASR	kayseri	IST	istanbul	01:00	05:00	15:00	17:00	19:30	23:15	
-Turkish Airlines	TK1301	A321-200	ASR	kayseri	ESB	ankara	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK1302	A321-200	ASR	kayseri	ADB	izmir	01:00	05:00	15:00	17:00	19:30	23:15	
-Turkish Airlines	TK1303	B737-900	ECN	lefkosa	IST	istanbul	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK2001	A320-200	IST	istanbul	ATH	atina	01:00	05:00	15:00	17:00	19:30	23:15	
-Turkish Airlines	TK2002	A321-200	IST	istanbul	BER	berlin	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK2003	A330-200	IST	istanbul	FCO	rome	01:00	05:00	15:00	17:00	19:30	23:15	
-Turkish Airlines	TK2004	A330-300	IST	istanbul	BVA	paris	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK2005	A340-300	IST	istanbul	LCY	londra	01:00	05:00	15:00	17:00	19:30	23:15	
-Turkish Airlines	TK2006	A320-200	IST	istanbul	MAD	madrid	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK2007	A321-200	IST	istanbul	ARN	stockholm	01:00	05:00	15:00	17:00	19:30	23:15	
-Turkish Airlines	TK2008	A330-200	IST	istanbul	OSL	oslo	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK2009	A330-300	IST	istanbul	MSQ	minsk	01:00	05:00	15:00	17:00	19:30	23:15	
-Turkish Airlines	TK2010	A340-300	IST	istanbul	DUB	dublin	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK2011	A320-200	IST	istanbul	AMS	amsterdam	01:00	05:00	15:00	17:00	19:30	23:15	
-Turkish Airlines	TK2012	A321-200	IST	istanbul	WAW	warsaw	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK2013	A330-200	IST	istanbul	IEV	kiev	01:00	05:00	15:00	17:00	19:30	23:15	
-Turkish Airlines	TK2014	A330-300	IST	istanbul	OTP	bucharest	02:00	06:00	16:00	18:00	21:15	22:05	
-Turkish Airlines	TK2015	A340-300	IST	istanbul	ZAG	zagreb	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK2016	A320-200	IST	istanbul	BRU	brussels	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK2017	A321-200	IST	istanbul	VIE	vienna	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK2018	A330-200	IST	istanbul	BEG	belgrad	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK2019	A330-300	IST	istanbul	SJJ	sarajevo	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK2020	A340-300	IST	istanbul	ZRH	zurich	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK2021	A320-200	IST	istanbul	DMW	moscow	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK2022	A321-200	IST	istanbul	RVK	reykjavik	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK2023	A330-200	IST	istanbul	BUD	budapest	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK2024	A330-300	IST	istanbul	HEL	helsinki	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK2025	A340-300	IST	istanbul	SOF	sofia	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK2026	A320-200	IST	istanbul	TIA	tiran	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK2027	A321-200	IST	istanbul	TLL	tallinn	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK2028	A330-200	IST	istanbul	LJU	ljubljana	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK2029	A330-300	IST	istanbul	SKP	skopje	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK2030	A340-300	IST	istanbul	BTS	bratislava	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK2031	A320-200	IST	istanbul	RIX	riga	01:00	05:00	15:00	17:00	19:30	22:05	
-Turkish Airlines	TK2032	A321-200	IST	istanbul	LIS	lisbon	02:00	06:00	16:00	18:00	21:15	23:15	
-Turkish Airlines	TK2033	A330-200	IST	istanbul	PRG	prague	01:00	05:00	15:00	17:00	19:30	22:05	
+Turkish Airlines	TK1001	B737-900	IST	istanbul	ADA	adana	02:00	09:00	15:00	18:00	21:00	22:05	22:50
+Turkish Airlines	TK1002	B737-800	IST	istanbul	ESB	ankara	03:00	11:00	15:00	19:00	22:00	23:15	23:40
+Turkish Airlines	TK1003	B737-700	IST	istanbul	AJI	agri	02:00	09:00	16:00	18:00	21:00	22:05	22:50
+Turkish Airlines	TK1004	B737-700	IST	istanbul	XHQ	artvin	03:00	11:00	15:00	19:00	22:00	23:15	23:40
+Turkish Airlines	TK1005	B737-700	IST	istanbul	ERZ	erzurum	02:00	09:00	16:00	18:00	21:00	22:05	22:50
+Turkish Airlines	TK1006	B737-700	IST	istanbul	ERC	erzincan	03:00	11:00	15:00	19:00	22:00	23:15	23:40
+Turkish Airlines	TK1007	B737-900	IST	istanbul	ADB	izmir	02:00	09:00	15:00	18:00	21:00	22:05	22:50
+Turkish Airlines	TK1008	B737-800	IST	istanbul	TZX	trabzon	03:00	11:00	16:00	19:00	22:00	23:15	23:40
+Turkish Airlines	TK1009	B737-900	IST	istanbul	DIY	diyarbakir	02:00	09:00	15:00	18:00	21:00	22:05	22:50
+Turkish Airlines	TK1010	B737-800	IST	istanbul	AYT	antalya	03:00	11:00	16:00	19:00	22:00	23:15	23:40
+Turkish Airlines	TK1011	B737-900	IST	istanbul	DLM	mugla	02:00	09:00	15:00	18:00	21:00	22:05	22:50
+Turkish Airlines	TK1013	A320-200	IST	istanbul	MLX	malatya	02:00	09:00	16:00	18:00	21:00	22:05	22:50
+Turkish Airlines	TK1014	A321-200	IST	istanbul	VAS	sivas	03:00	11:00	15:00	19:00	22:00	23:15	23:40
+Turkish Airlines	TK1015	A320-200	IST	istanbul	VAN	van	02:00	09:00	16:00	18:00	21:00	22:05	22:50
+Turkish Airlines	TK1016	A321-200	IST	istanbul	GZT	gaziantep	03:00	11:00	15:00	19:00	22:00	23:15	23:40
+Turkish Airlines	TK1017	A320-200	IST	istanbul	GNY	sanliurfa	02:00	09:00	15:00	18:00	21:00	22:05	22:50
+Turkish Airlines	TK1018	A321-200	IST	istanbul	SZF	samsun	03:00	11:00	16:00	19:00	22:00	23:15	23:40
+Turkish Airlines	TK1019	A320-200	IST	istanbul	OGU	giresun	02:00	09:00	15:00	18:00	21:00	22:05	22:50
+Turkish Airlines	TK1020	A321-200	IST	istanbul	ASR	kayseri	03:00	11:00	16:00	19:00	22:00	23:15	23:40
+Turkish Airlines	TK1021	B737-900	IST	istanbul	ECN	lefkosa	02:00	09:00	15:00	18:00	21:00	22:05	22:50
+Turkish Airlines	TK1111	B737-900	ADA	adana	IST	istanbul	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK1112	B737-900	ADA	adana	ESB	ankara	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK1113	B737-900	ADA	adana	ADB	izmir	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK1114	B737-900	ADA	adana	TZX	trabzon	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK1120	B737-800	ESB	ankara	IST	istanbul	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK1121	B737-800	ESB	ankara	ADB	izmir	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK1122	B737-800	ESB	ankara	TZX	trabzon	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK1123	B737-800	ESB	ankara	AYT	antalya	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK1124	B737-800	ESB	ankara	OGU	giresun	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK1125	B737-800	ESB	ankara	ERZ	erzurum	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK1126	B737-700	AJI	agri	IST	istanbul	01:00	05:00	15:00	17:00	19:30	22:05	23:15
+Turkish Airlines	TK1131	B737-700	AJI	agri	ESB	ankara	02:00	06:00	16:00	18:00	21:15	23:15	23:40
+Turkish Airlines	TK1132	B737-700	AJI	agri	ADB	izmir	01:00	05:00	15:00	17:00	19:30	22:05	23:15
+Turkish Airlines	TK1133	B737-700	XHQ	artvin	IST	istanbul	02:00	06:00	16:00	18:00	21:15	23:15	23:40
+Turkish Airlines	TK1141	B737-700	XHQ	artvin	ESB	ankara	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK1142	B737-700	XHQ	artvin	ADB	izmir	02:00	06:00	16:00	18:00	21:15	23:15	23:15
+Turkish Airlines	TK1143	B737-700	ERZ	erzurum	IST	istanbul	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK1151	B737-700	ERZ	erzurum	ESB	ankara	02:00	06:00	16:00	18:00	21:15	23:15	23:15
+Turkish Airlines	TK1152	B737-700	ERZ	erzurum	ADB	izmir	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK1153	B737-700	ERC	erzincan	IST	istanbul	02:00	06:00	16:00	18:00	21:15	23:15	23:40
+Turkish Airlines	TK1161	B737-700	ERC	erzincan	ESB	ankara	01:00	05:00	15:00	17:00	19:30	22:05	23:15
+Turkish Airlines	TK1162	B737-700	ERC	erzincan	ADB	izmir	02:00	06:00	16:00	18:00	21:15	22:05	23:40
+Turkish Airlines	TK1163	B737-900	ADB	izmir	IST	istanbul	01:00	05:00	15:00	17:00	19:30	23:15	23:15
+Turkish Airlines	TK1171	B737-900	ADB	izmir	ESB	ankara	02:00	06:00	16:00	18:00	21:15	22:05	23:40
+Turkish Airlines	TK1172	B737-900	ADB	izmir	AYT	antalya	01:00	05:00	15:00	17:00	19:30	23:15	23:40
+Turkish Airlines	TK1173	B737-900	ADB	izmir	TZX	trabzon	02:00	06:00	16:00	18:00	21:15	22:05	23:15
+Turkish Airlines	TK1174	B737-900	ADB	izmir	DIY	diyarbakir	01:00	05:00	15:00	17:00	19:30	23:15	23:40
+Turkish Airlines	TK1175	B737-900	ADB	izmir	VAN	van	02:00	06:00	16:00	18:00	21:15	22:05	23:15
+Turkish Airlines	TK1176	B737-900	ADB	izmir	ERZ	erzurum	01:00	05:00	15:00	17:00	19:30	23:15	23:40
+Turkish Airlines	TK1177	B737-800	TZX	trabzon	IST	istanbul	02:00	06:00	16:00	18:00	21:15	22:05	23:40
+Turkish Airlines	TK1181	B737-800	TZX	trabzon	ESB	ankara	01:00	05:00	15:00	17:00	19:30	23:15	23:15
+Turkish Airlines	TK1182	B737-800	TZX	trabzon	ADB	izmir	02:00	06:00	16:00	18:00	21:15	22:05	22:50
+Turkish Airlines	TK1183	B737-900	DIY	diyarbakir	IST	istanbul	01:00	05:00	15:00	17:00	19:30	23:15	23:40
+Turkish Airlines	TK1191	B737-900	DIY	diyarbakir	ESB	ankara	02:00	06:00	16:00	18:00	21:15	22:05	22:50
+Turkish Airlines	TK1192	B737-900	DIY	diyarbakir	ADB	izmir	01:00	05:00	15:00	17:00	19:30	23:15	23:40
+Turkish Airlines	TK1193	B737-800	AYT	antalya	IST	istanbul	02:00	06:00	16:00	18:00	21:15	22:05	22:50
+Turkish Airlines	TK1201	B737-800	AYT	antalya	ESB	ankara	01:00	05:00	15:00	17:00	19:30	23:15	23:40
+Turkish Airlines	TK1202	B737-800	AYT	antalya	ADB	izmir	02:00	06:00	16:00	18:00	21:15	22:05	22:50
+Turkish Airlines	TK1203	B737-800	AYT	antalya	DIY	diyarbakir	01:00	05:00	15:00	17:00	19:30	23:15	23:40
+Turkish Airlines	TK1204	B737-900	DLM	mugla	IST	istanbul	02:00	06:00	16:00	18:00	21:15	22:05	22:50
+Turkish Airlines	TK1211	B737-900	DLM	mugla	ESB	ankara	01:00	05:00	15:00	17:00	19:30	23:15	23:40
+Turkish Airlines	TK1212	B737-900	DLM	mugla	ADB	izmir	02:00	06:00	16:00	18:00	21:15	22:05	22:50
+Turkish Airlines	TK1223	A320-200	MLX	malatya	IST	istanbul	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK1231	A320-200	MLX	malatya	ESB	ankara	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK1232	A320-200	MLX	malatya	ADB	izmir	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK1233	A321-200	VAS	sivas	IST	istanbul	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK1241	A321-200	VAS	sivas	ESB	ankara	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK1242	A321-200	VAS	sivas	ADB	izmir	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK1243	A320-200	VAN	van	IST	istanbul	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK1251	A320-200	VAN	van	ESB	ankara	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK1252	A320-200	VAN	van	ADB	izmir	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK1253	A321-200	GZT	gaziantep	IST	istanbul	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK1261	A321-200	GZT	gaziantep	ESB	ankara	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK1262	A321-200	GZT	gaziantep	ADB	izmir	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK1263	A320-200	GNY	sanliurfa	IST	istanbul	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK1271	A320-200	GNY	sanliurfa	ESB	ankara	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK1272	A320-200	GNY	sanliurfa	ADB	izmir	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK1273	A321-200	SZF	samsun	IST	istanbul	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK1281	A321-200	SZF	samsun	ESB	ankara	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK1282	A321-200	SZF	samsun	ADB	izmir	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK1283	A320-200	OGU	giresun	IST	istanbul	02:00	06:00	16:00	18:00	21:15	22:05	22:50
+Turkish Airlines	TK1291	A320-200	OGU	giresun	ESB	ankara	01:00	05:00	15:00	17:00	19:30	23:15	23:40
+Turkish Airlines	TK1292	A320-200	OGU	giresun	ADB	izmir	02:00	06:00	16:00	18:00	21:15	22:05	22:50
+Turkish Airlines	TK1293	A321-200	ASR	kayseri	IST	istanbul	01:00	05:00	15:00	17:00	19:30	23:15	23:40
+Turkish Airlines	TK1301	A321-200	ASR	kayseri	ESB	ankara	02:00	06:00	16:00	18:00	21:15	22:05	22:50
+Turkish Airlines	TK1302	A321-200	ASR	kayseri	ADB	izmir	01:00	05:00	15:00	17:00	19:30	23:15	23:40
+Turkish Airlines	TK1303	B737-900	ECN	lefkosa	IST	istanbul	02:00	06:00	16:00	18:00	21:15	22:05	22:50
+Turkish Airlines	TK2001	A320-200	IST	istanbul	ATH	atina	01:00	05:00	15:00	17:00	19:30	23:15	23:40
+Turkish Airlines	TK2002	A321-200	IST	istanbul	BER	berlin	02:00	06:00	16:00	18:00	21:15	22:05	22:50
+Turkish Airlines	TK2003	A330-200	IST	istanbul	FCO	rome	01:00	05:00	15:00	17:00	19:30	23:15	23:40
+Turkish Airlines	TK2004	A330-300	IST	istanbul	BVA	paris	02:00	06:00	16:00	18:00	21:15	22:05	22:50
+Turkish Airlines	TK2005	A340-300	IST	istanbul	LCY	londra	01:00	05:00	15:00	17:00	19:30	23:15	23:40
+Turkish Airlines	TK2006	A320-200	IST	istanbul	MAD	madrid	02:00	06:00	16:00	18:00	21:15	22:05	22:50
+Turkish Airlines	TK2007	A321-200	IST	istanbul	ARN	stockholm	01:00	05:00	15:00	17:00	19:30	23:15	23:40
+Turkish Airlines	TK2008	A330-200	IST	istanbul	OSL	oslo	02:00	06:00	16:00	18:00	21:15	22:05	22:50
+Turkish Airlines	TK2009	A330-300	IST	istanbul	MSQ	minsk	01:00	05:00	15:00	17:00	19:30	23:15	23:40
+Turkish Airlines	TK2010	A340-300	IST	istanbul	DUB	dublin	02:00	06:00	16:00	18:00	21:15	22:05	22:50
+Turkish Airlines	TK2011	A320-200	IST	istanbul	AMS	amsterdam	01:00	05:00	15:00	17:00	19:30	23:15	23:40
+Turkish Airlines	TK2012	A321-200	IST	istanbul	WAW	warsaw	02:00	06:00	16:00	18:00	21:15	22:05	22:50
+Turkish Airlines	TK2013	A330-200	IST	istanbul	IEV	kiev	01:00	05:00	15:00	17:00	19:30	23:15	23:40
+Turkish Airlines	TK2014	A330-300	IST	istanbul	OTP	bucharest	02:00	06:00	16:00	18:00	21:15	22:05	22:50
+Turkish Airlines	TK2015	A340-300	IST	istanbul	ZAG	zagreb	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK2016	A320-200	IST	istanbul	BRU	brussels	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK2017	A321-200	IST	istanbul	VIE	vienna	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK2018	A330-200	IST	istanbul	BEG	belgrad	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK2019	A330-300	IST	istanbul	SJJ	sarajevo	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK2020	A340-300	IST	istanbul	ZRH	zurich	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK2021	A320-200	IST	istanbul	DMW	moscow	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK2022	A321-200	IST	istanbul	RVK	reykjavik	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK2023	A330-200	IST	istanbul	BUD	budapest	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK2024	A330-300	IST	istanbul	HEL	helsinki	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK2025	A340-300	IST	istanbul	SOF	sofia	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK2026	A320-200	IST	istanbul	TIA	tiran	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK2027	A321-200	IST	istanbul	TLL	tallinn	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK2028	A330-200	IST	istanbul	LJU	ljubljana	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK2029	A330-300	IST	istanbul	SKP	skopje	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK2030	A340-300	IST	istanbul	BTS	bratislava	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK2031	A320-200	IST	istanbul	RIX	riga	01:00	05:00	15:00	17:00	19:30	22:05	23:40
+Turkish Airlines	TK2032	A321-200	IST	istanbul	LIS	lisbon	02:00	06:00	16:00	18:00	21:15	23:15	22:50
+Turkish Airlines	TK2033	A330-200	IST	istanbul	PRG	prague	01:00	05:00	15:00	17:00	19:30	22:05	23:40
 Turkish Airlines	TK2101	A320-200	ATH	atina	IST	istanbul	02:00	09:00	12:15	15:00	18:00	21:00	22:05
 Turkish Airlines	TK2102	A321-200	BER	berlin	IST	istanbul	03:00	11:00	13:05	15:00	19:00	22:00	23:15
 Turkish Airlines	TK2103	A330-200	FCO	rome	IST	istanbul	02:00	09:00	12:15	16:00	18:00	21:00	22:05
