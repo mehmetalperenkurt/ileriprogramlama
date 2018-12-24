@@ -23,9 +23,9 @@
                             </div>
                             
                             <div >
-                                
+                                 
                             </div>
-						</div>
+                        </div>
 						<form action="javascript:getFlightHours();" id="booking-form">
 							<div class="form-group">
 								<div class="form-checkbox input-not-empty">
@@ -51,7 +51,7 @@
                                 </div>
                                 <div class="col-md-2">
                                         <div class="form-btn" >
-                                            <input type="button" class="icon2" onclick="tooglesw()" >
+                                            <input type="button" class="icon2" title="Switch" onclick="tooglesw()" >
                                         </div>
                                 </div>
                                 <div class="col-md-5">
@@ -101,7 +101,7 @@
 								<div class="col-md-2">
 									<div class="form-btn" >
 										<span class="form-label-tgl"></span>
-										<input type="button" class="tgl-btn icon" value="CLEAR" onclick="clearForm();">
+										<input type="button" class="tgl-btn-icon" title="Clear all fields" onclick="clearForm();">
 										
 									</div>
 								</div>
@@ -115,25 +115,30 @@
         							<input id="hiddenDestLoc" type="hidden" value="">
 									<input id="hiddenAdultCount" type="hidden" value="">
         							<input id="hiddenChildCount" type="hidden" value="">
-       								<input id="hiddenFlightCode" type="hidden" value="">
+                                       <input id="hiddenFlightCode" type="hidden" value="">
+                                       <input id="companyNameData" type="hidden" value="">
+
 									<input id="txtSeatNumber" type="hidden" value="">
 						
-					</div>
+                    </div>
+                    <div class="ticket-form" >
+                            <table id="showTicketTable" >
+                            </table>
+                        </div>
 				</div>
             </div>
-            <div class="col-md-12">
-            <div id="showTicket" class="result-form" >
-                <table id="showTicketTable" class="tableStyle">
-                </table>
-        </div></div>
+            
 			<div class="result-form" id="result-form" style="display:none;">
 				<div class="form-header" id="result-form-header">
-					<h1 id="h1-result"></h1> 
+                    <h1 id="h1-result"></h1> 
+                    
+                            
 				</div>
                
 	<div id="result-flight" class="result-form">
 		
-	</div>
+    </div>
+
 	
 				
 				<div id="div-customer" style="display:none;" class="booking-form">
@@ -141,21 +146,29 @@
 						<div class='form-group input-not-empty'>
 							<input class='form-control' type='text' autocomplete='off' autocapitalize='off' autocorrect='off' required> 
 							<span class='form-label'>FAlan</span>
-						</div>
-					</div>
+                        </div>
+                    </div>
         		</div>
                 
 				
 
         		</div>
 			</div>
-
-
+            
+                
+            
 
 		</div>
 		
-	
-	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	    <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <div class="canvas-container">
+                          <span class="close">&times;</span>
+                          <canvas id="canvas" width="820" height="350"></canvas>
+                  </div>
+                </div>
+              </div>
+	<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
 	
 
 	<script>
@@ -252,12 +265,13 @@ class database{
         document.getElementById('result-form-header').style.display='none'
         document.getElementById('result-form').style.display='none'; 
         document.getElementById('showTicketTable').style.display='';
-        
-    var $html="<tr><th>Flight</th><th>Date</th><th>Time</th><th>From</th><th>To</th><th>Passenger</th><th></th></tr>";
+        var count=0;
+    var $html="<tr><th>Flight</th><th>Date</th><th>Time</th><th>From >> To</th><th>Passenger</th><th></th></tr>";
     for(let x of ac.tickets){
         var item=x[1].date+" - "+x[1].boardingTime+" - "+x[1].departLocation+" - "+x[1].destinationLocation+" - "+x[1].passenger;
         console.log(item);
-		var $inputHtml = "<tr><td>"+x[1].resCode+"</td><td>"+x[1].date+"</td><td>"+x[1].boardingTime+"</td><td>"+x[1].departLocation+"</td><td>"+x[1].destinationLocation+"</td><td>"+x[1].passenger+"</td><th>PrintButton</th></tr>";
+        var printData=x[0].toString();
+		var $inputHtml = "<tr><td>"+x[1].resCode+"</td><td>"+x[1].date+"</td><td>"+x[1].boardingTime+"</td><td>"+x[1].departLocation+" >> "+x[1].destinationLocation+"</td><td>"+x[1].passenger+"</td><th><input type='button' class='btnPrint' id='btnPrint' onclick='printTicket(\""+printData+ "\")'></th></tr>";
         $html += $inputHtml;
     }   
         if($html.length>101){
@@ -271,6 +285,7 @@ class database{
     sellTicket(){
 	var adultCnt=parseInt(document.getElementById('hiddenAdultCount').value);
     var childCnt=parseInt(document.getElementById('hiddenChildCount').value);
+    var companyName= document.getElementById('companyNameData').value;
 	var customerNameCnt=[];
 	var countCnt=adultCnt+childCnt;
 	for(let i=0;i<countCnt;i++){
@@ -291,18 +306,19 @@ class database{
         var currentCustomer = document.getElementById('customer'+(i+1)).value;
         var ticketCode= currentDate+" "+currentHour+" "+flightCode + " " + currentSeat;
         var ticketGuid = guid();
-        const ticket11 =new ticket(ticketGuid,flightCode,currentSeat,currentDate,currentHour, currentCustomer,currentDepart,currentDestination);
+        const ticket11 =new ticket(ticketGuid,flightCode,currentSeat,currentDate,currentHour, currentCustomer,currentDepart,currentDestination,companyName);
         ac.tickets.set(ticketCode, ticket11);
     }
     alert("Successfully Booked");
+    clearForm();   
     document.getElementById("div-customer").style.display = "none";
     document.getElementById("result-form").style.display = "none";
-
+    topFunction();
     }
 }
 }
 ac=new database();
-function getFlightHours(){
+var getFlightHours = function(){
     document.getElementById('showTicketTable').style.display="none";
     document.getElementById('result-form-header').style.display='block'
     document.getElementById('div-customer').setAttribute("style","display:none;");
@@ -324,11 +340,13 @@ function getFlightHours(){
         var item = x[1];
         if(item.departLocation == departure && item.destinationLocationCode == destination){
             
+            document.getElementById('companyNameData').value = item.companyName;
+
             flightDates = item.flightDates;
             appendToLi(flightDates, item.flightCode);
 			document.getElementById("result-form").setAttribute("style","display:visible;");
 			setTimeout(scrollToBottom(),500);
-		    document.getElementById('h1-result').innerHTML=destination+" >> "+departure+" >> "+ departDate;
+		    document.getElementById('h1-result').innerHTML=departDate+" >> "+departure+" >> "+ destination;
         }
     }
     if(flightDates.length<1){
@@ -504,8 +522,8 @@ for(let x of ac.tickets){
 console.log(item1[3]);}
 }
 }
-function guid() {
-  function s4() {
+var guid = function() {
+  var s4 = function() {
     return Math.floor((1 + Math.random()) * 0x10000)
       .toString(16)
       .substring(1);
@@ -525,7 +543,86 @@ departLocationList.innerHTML=str;
 setTimeout(function(){ const out=ac.flights.size;  ac.datalist(); }, 700);
 
 window.onscroll = function() {scrollFunction()};
+/****************************************************/
+var printTicket = function(x){
+    var data = this.ac.tickets.get(x);
+    var ctx = document.getElementById('canvas').getContext('2d');
+        var img = new Image();
+        var imgTALogo= new Image();
+        var imgIBLogo= new Image();
+        var imgLULogo= new Image();
+        var imgAFLogo= new Image();
+        var imgBALogo= new Image();
+        img.onload = function() {
+        ctx.drawImage(img, 0, 0);
+        ctx.font = "19px Tahoma";
+        ctx.fillText(data.destinationLocation,104, 221);
+        ctx.fillText(data.departLocation,104, 164);
+        ctx.fillText(data.passenger,104, 108);
+        ctx.fillText(data.seats,104, 275);
+        ctx.fillText(data.resCode,317, 164);
+        ctx.fillText(data.date,471, 164);
+        ctx.fillText(data.boardingTime,471, 221);
+        ctx.font = "13px Tahoma";
+        ctx.fillText(data.passenger,605,100);
+        ctx.font = "15px Tahoma";
+        ctx.fillText(data.departLocation,605, 144);
+        ctx.fillText(data.destinationLocation, 605,188);
+        ctx.fillText(data.seats,605, 277);
+        ctx.fillText(data.resCode,605, 232);
+        ctx.fillText(data.date,714, 232);
+        ctx.fillText(data.boardingTime,714, 277);
+        if(data.currentCompany=="Turkish Airlines") ctx.drawImage(imgTALogo,326,245)
+        else if(data.currentCompany=="Iberia")  ctx.drawImage(imgIBLogo,326,245)
+        else if(data.currentCompany=="Lufthansa") ctx.drawImage(imgLULogo,326,245)
+        else if(data.currentCompany=="Air France") ctx.drawImage(imgAFLogo,326,245)
+        else if(data.currentCompany=="British Airlines") ctx.drawImage(imgBALogo,326,245)
 
+
+
+        ctx.drawImage(imgLogo,451,266);
+  };
+        img.src = 'pass2.png';
+        imgTALogo.src = 'ta-logo.png';
+        imgIBLogo.src= 'ib-logo.png';
+        imgLULogo.src='lu-logo.png';
+        imgAFLogo.src= 'af-logo.png';
+        imgBALogo.src= 'ba-logo.png';
+        document.getElementById('myModal').style.display='block';
+        ctx.clearRect(0,0,820,350);
+}
+var dataURL = canvas.toDataURL('image/png',0.92);
+console.log(dataURL);
+var modal = document.getElementById('myModal');
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+  modal.style.display = "none";
+}
+/*var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("btnPrint");
+
+// Get the <span> element that closes the modal
+
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+/*********************/
 var scrollFunction= function() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("myBtn").style.display = "block";
@@ -553,6 +650,7 @@ var clearForm = function(){
 }
 	</script>
     <div style="margin-bottom: -50px; ">
+    <a href="https://mehmetalperenkurt.github.io/ileriprogramlama/">GitHub Repo</a><br>
     <a href="https://getbootstrap.com/docs/4.1/layout/grid/">bootstrap col-md</a><br>
     <a href="http://guid.us/GUID/JavaScript">GUID Generator</a><br>
     <a href="https://www.w3schools.com/howto/howto_js_scroll_to_top.asp">Scroll Function </a><br>
@@ -562,5 +660,6 @@ var clearForm = function(){
 
     
     </div>
+
 </body>
 </html>
