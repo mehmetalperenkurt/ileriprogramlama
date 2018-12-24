@@ -572,15 +572,15 @@ var printTicket = function(x){
         ctx.fillText(data.resCode,605, 232);
         ctx.fillText(data.date,714, 232);
         ctx.fillText(data.boardingTime,714, 277);
-        if(data.currentCompany=="Turkish Airlines") ctx.drawImage(imgTALogo,326,245)
-        else if(data.currentCompany=="Iberia")  ctx.drawImage(imgIBLogo,326,245)
-        else if(data.currentCompany=="Lufthansa") ctx.drawImage(imgLULogo,326,245)
-        else if(data.currentCompany=="Air France") ctx.drawImage(imgAFLogo,326,245)
-        else if(data.currentCompany=="British Airlines") ctx.drawImage(imgBALogo,326,245)
+        if(data.currentCompany=="Turkish Airlines") ctx.drawImage(imgTALogo,326,245);
+        else if(data.currentCompany=="Iberia")  ctx.drawImage(imgIBLogo,326,245);
+        else if(data.currentCompany=="Lufthansa") ctx.drawImage(imgLULogo,326,245);
+        else if(data.currentCompany=="Air France") ctx.drawImage(imgAFLogo,326,245);
+        else if(data.currentCompany=="British Airlines") ctx.drawImage(imgBALogo,326,245);
 
 
 
-        ctx.drawImage(imgLogo,451,266);
+        //ctx.drawImage(imgLogo,451,266);
   };
         img.src = 'pass2.png';
         imgTALogo.src = 'ta-logo.png';
