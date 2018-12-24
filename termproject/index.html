@@ -174,6 +174,7 @@
 	<script>
 	var today = new Date();
 	var dd = today.getDate();
+    const currentTime=today.getHours();
 	var mm = today.getMonth()+1; //January is 0!
 	var yyyy = today.getFullYear();
  		if(dd<10){
@@ -221,7 +222,7 @@
 }
 class database{
     constructor(){
-        this.urlS="https://raw.githubusercontent.com/mehmetalperenkurt/ileriprogramlama/master/work/calisma/flights3.txt";
+        this.urlS="https://mehmetalperenkurt.github.io/ileriprogramlama/work/calisma/flights2.txt";
         this.flights= new Map();
         this.tickets=new Map();
         this.airports=new Set();
@@ -319,6 +320,7 @@ class database{
 }
 ac=new database();
 var getFlightHours = function(){
+    //var hours=today.getHours();
     document.getElementById('showTicketTable').style.display="none";
     document.getElementById('result-form-header').style.display='block'
     document.getElementById('div-customer').setAttribute("style","display:none;");
@@ -355,14 +357,26 @@ var getFlightHours = function(){
     }
 }
 var appendToLi = function(flightDates, flightCode){
+    // var realDate=new Date();
+    // var currentTime= realDate.getHours().toString();
+    var realDate= document.getElementById('txtDepartDate').value;
 	var departLoc= document.getElementById('hiddenDepartLoc').value;
 	var destLoc= document.getElementById('hiddenDestLoc').value;
 
     var $html = "";
     $html += "";
     flightDates.forEach(element => {
+        var elementControl=parseInt(element.slice(0,2));
+        if(today==realDate){
+        if(elementControl>currentTime){
         $html += "<div id='result-flight2' class='row pResult result-flight2 result-form'><div class='col-md-3'>"+element+"</div><div  class='col-md-3'>"+departLoc+"</div><div  class='col-md-3'>"+destLoc+"</div><div  class='col-md-3'><input type='button' class='tgl-btn-book' value='BOOK' flightCode='"+flightCode+"' resultHiddenHour='"+element+"' onclick='setTicket(this)'></div></div>";
         //$html += "<li><a class='set-ticket' onclick='setTicket(this)' flightCode='"+flightCode+"'>"+element+"</a></li>";
+        }}
+        else{
+        $html += "<div id='result-flight2' class='row pResult result-flight2 result-form'><div class='col-md-3'>"+element+"</div><div  class='col-md-3'>"+departLoc+"</div><div  class='col-md-3'>"+destLoc+"</div><div  class='col-md-3'><input type='button' class='tgl-btn-book' value='BOOK' flightCode='"+flightCode+"' resultHiddenHour='"+element+"' onclick='setTicket(this)'></div></div>";
+        //$html += "<li><a class='set-ticket' onclick='setTicket(this)' flightCode='"+flightCode+"'>"+element+"</a></li>";
+        }
+        
     });
     $html+= "";
     document.getElementById("result-flight").style.display = "block";
@@ -572,15 +586,15 @@ var printTicket = function(x){
         ctx.fillText(data.resCode,605, 232);
         ctx.fillText(data.date,714, 232);
         ctx.fillText(data.boardingTime,714, 277);
-        if(data.currentCompany=="Turkish Airlines") ctx.drawImage(imgTALogo,326,245);
-        else if(data.currentCompany=="Iberia")  ctx.drawImage(imgIBLogo,326,245);
-        else if(data.currentCompany=="Lufthansa") ctx.drawImage(imgLULogo,326,245);
-        else if(data.currentCompany=="Air France") ctx.drawImage(imgAFLogo,326,245);
-        else if(data.currentCompany=="British Airlines") ctx.drawImage(imgBALogo,326,245);
+        if(data.currentCompany=="Turkish Airlines") ctx.drawImage(imgTALogo,326,245)
+        else if(data.currentCompany=="Iberia")  ctx.drawImage(imgIBLogo,326,245)
+        else if(data.currentCompany=="Lufthansa") ctx.drawImage(imgLULogo,326,245)
+        else if(data.currentCompany=="Air France") ctx.drawImage(imgAFLogo,326,245)
+        else if(data.currentCompany=="British Airlines") ctx.drawImage(imgBALogo,326,245)
 
 
 
-        //ctx.drawImage(imgLogo,451,266);
+        ctx.drawImage(imgLogo,451,266);
   };
         img.src = 'pass2.png';
         imgTALogo.src = 'ta-logo.png';
