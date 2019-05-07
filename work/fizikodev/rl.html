@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>fizik2 ödev</title>
+    </head>
+    <script type="text/javascript" src="src/canvasjs.min.js"></script>
+    <script>
+    
+    
+    class dataPoints{
+        constructor(x,y){
+            this.x=x;
+            this.y=y;
+        }
+    }
+    this.dataPoint = new Map();
+    var e=2.71828;
+    
+    function yaz(){
+    document.getElementById("out").innerHTML=document.getElementById("t").value;
+    }
+    const point={};
+    function parse(points){
+        var cart=[];
+        var i=0;
+        for(let x of points){
+            
+        //this.dataPoint.set(x=>i,y=>x);
+        const point = new dataPoints(i,x);
+        cart.push(point);
+        /*point.x=i;
+        point.y=x;*/
+        
+        i++;
+        }
+        draw(cart);
+    }
+    
+    function hesapla(){
+        var points=[];
+        var V=document.getElementById("V").value;
+        var R=document.getElementById("R").value;
+        var L=document.getElementById("L").value;
+        var t=document.getElementById("t").value;
+        var T=L/R;
+        for(var i=0;i<=t;i++){
+            var us=(-1)*(i/T);
+            var I=(V/R)*(1-(e**us));
+            points.push(I);
+            
+        }
+        parse(points);
+    }
+    function draw(cart){
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+
+      title:{
+      text: "RL Devresi Akım-Zaman"
+      },
+       data: [
+      {
+        type: "line",
+        dataPoints: cart
+      }
+      ]
+    });
+
+    chart.render();
+  
+    }
+    </script>
+    <body>
+            <input type="text" id="V" value="12">V<br>
+            <input type="text" id="R" value="6">ohm<br>
+            <input type="text" id="L" value="30">mH<br>
+            <input type="text" id="t" value="40" step="1" min="0" max="100">ms<br>
+            <input type="button" value="hesapla" onclick="hesapla();">
+            <div id="chartContainer" style="height: 300px; width: 50%;">
+    </body>
+</html>
