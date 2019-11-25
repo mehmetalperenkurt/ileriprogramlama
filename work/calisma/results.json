@@ -1,0 +1,38 @@
+[
+    {
+        "magaza_kodu": "1216",
+        "magaza_teslim_tarih": "2019-09-26 11:21:00",
+        "magaza_lati": "41.482149",
+        "magaza_long": "41.524342"
+    },
+    {
+        "magaza_kodu": "1138",
+        "magaza_teslim_tarih": "2019-09-26 21:52:00",
+        "magaza_lati": "41.004701",
+        "magaza_long": "39.716147"
+    },
+    {
+        "magaza_kodu": "1292",
+        "magaza_teslim_tarih": "2019-09-27 03:41:00",
+        "magaza_lati": "40.917113",
+        "magaza_long": "38.384495"
+    },
+    {
+        "magaza_kodu": "1164",
+        "magaza_teslim_tarih": "2019-09-27 20:15:00",
+        "magaza_lati": "40.999624",
+        "magaza_long": "39.760181"
+    },
+    {
+        "magaza_kodu": "1420",
+        "magaza_teslim_tarih": "2019-09-27 21:10:00",
+        "magaza_lati": "40.458843",
+        "magaza_long": "39.478844"
+    },
+    {
+        "magaza_kodu": "1234",
+        "magaza_teslim_tarih": "2019-09-27 21:24:00",
+        "magaza_lati": "41.005615",
+        "magaza_long": "39.726403"
+    }
+]
